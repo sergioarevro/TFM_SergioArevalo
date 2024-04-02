@@ -63,7 +63,13 @@ module.exports = {
     // You should run a client (like ganache, geth, or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
-    //
+    besu: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+      gasPrice: 0,
+      gas: "0x1ffffffffffffe"
+     }
     // development: {
     //  host: "127.0.0.1",     // Localhost (default: none)
     //  port: 8545,            // Standard Ethereum port (default: none)
