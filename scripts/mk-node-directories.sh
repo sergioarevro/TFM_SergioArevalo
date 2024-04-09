@@ -1,15 +1,12 @@
 #Author: Sergio Arévalo Roa 
-#Description: Script for create directories for Besu private network
-
 #!/bin/bash
-
 
 Help()
 {
    echo
-   echo "Script for create directories for Hyperledger Besu private Network"
+   echo "Script para crear la estructura de directorios necesaria para el funcionamiento de los nodos de la red."
    echo
-   echo "Structure Type:"
+   echo "Estructura:"
    echo "       QBFT-Network/"
    echo "       ├── Node-1"
    echo "       │   └── data"
@@ -20,10 +17,10 @@ Help()
    echo "       └── Node-4"
    echo "        └── data"
    echo
-   echo "Usage: ./mk-node-directories.sh <number-of-nodes>"
+   echo "Uso: ./mk-node-directories.sh"
    echo
-   echo "Options:"
-   echo "       -h     Print this Help."
+   echo "Opciones:"
+   echo "       -h     Imprime esta ayuda."
    echo
 }
 
@@ -34,27 +31,28 @@ while getopts ":h" option; do
    esac
 done
 
-#Verify if number of nodes is specified
-if [ $# -eq 0 ]; then
-    echo "Please specify number of nodes."
-    exit 1
+qbftnet_dir="../besu/QBFT-Network"
+qbft_config="../besu/QBFTConfigFile.json"
+besu_dir="../besu"
+nodes=4
+
+if [ -d "$qbftnet_dir" ]; then
+        echo "El directorio QBFT-Network ya existe. La estructura está creada."
+
 else
-    nodes=$1
-    echo "Creating structure for $nodes"
+        echo "Creando estructura de directorios para $nodes nodos."
+        mkdir -p $qbftnet_dir
 
-    mkdir -p QBFT-Network
-
-    for ((i = 1; i<= $nodes; i++))
-    do
-            mkdir -p QBFT-Network/Node-$i/data
-    done
+        for ((i = 1; i<= $nodes; i++))
+        do
+                mkdir -p $qbftnet_dir/Node-$i/data
+        done
 fi
 
-#if qbftConfigFile.json exist move it to QBFT-Network directory
-
-if [ -f "./qbftConfigFile.json" ]; then
-        cp qbftConfigFile.json QBFT-Network
+if [ -f "$besu_dir/qbftConfigFile.json" ]; then
+        cp $besu_dir/qbftConfigFile.json $qbftnet_dir
 else
-        echo "Remember to create the file qbftConfigFile.json" 
+        if ! [ -f "$qbftnet_dir/qbftConfigFile.json" ]; then
+                echo "AVISO. Recuerda creear el fichero qbftConfigFile.json y añadirlo al directorio QBFT-Network. En caso contrario el despliegue de la red fallará."
+        fi
 fi
-
