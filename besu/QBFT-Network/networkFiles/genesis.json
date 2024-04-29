@@ -1,8 +1,7 @@
 {
   "config" : {
     "chainId" : 1337,
-    "londonBlock" : 0,
-    "gasLimit" : "0x1fffffffffffff",
+    "berlinBlock" : 0,
     "contractSizeLimit" : 2147483647,
     "zeroBaseFee" : true,
     "qbft" : {
@@ -14,13 +13,14 @@
   "nonce" : "0x0",
   "timestamp" : "0x58ee40ba",
   "difficulty" : "0x1",
+  "gasLimit" : "0x1fffffffffffff",
   "mixHash" : "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
   "coinbase" : "0x0000000000000000000000000000000000000000",
   "alloc" : {
     "fe3b557e8fb62b89f4916b721be55ceb828dbd73" : {
       "privateKey" : "8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
       "comment" : "private key and this comment are ignored.  In a real chain, the private key should NOT be stored",
-      "balance" : "0xad78ebc5ac6200000"
+      "balance" : "900000000000000000000000000"
     },
     "627306090abaB3A6e1400e9345bC60c78a8BEf57" : {
       "privateKey" : "c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3",
@@ -33,5 +33,5 @@
       "balance" : "90000000000000000000000"
     }
   },
-  "extraData" : "0xf87aa00000000000000000000000000000000000000000000000000000000000000000f85494a9f3b88b5a04daf4e305cf64a6a09687db07c03b94548427c2b018974b1bba1ced35479b47d5721d0894536343596d4f3159db3532ac03c22a59df6a171994f3c565942e12ee06e1f3b604bc987323a9fe2b50c080c0"
+  "extraData" : "0xf87aa00000000000000000000000000000000000000000000000000000000000000000f85494dcfba7016b66ec9f76d5473b50c5479ca6991f2c94081eb7bf14af88082bc0d63877498a86561db0f594afdf4a644a18f8bf543f0db3142dbd168e42b3b3942a7fbea20c7f955cf732c01ea9dad945936950acc080c0"
 }
