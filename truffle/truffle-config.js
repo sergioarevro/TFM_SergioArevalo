@@ -13,22 +13,19 @@ module.exports = {
       port: 8545,
       network_id: "*",
       gasPrice: 0,
-      //gas: "0x1ffffffffffffe",
       provider: hdWalletProvider,
      }
 
   },
 
-  // Set default mocha options here, use special reporters, etc.
+  // JS library for build tests
   mocha: {
-    // timeout: 100000
   },
 
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.21",      // Fetch exact version from solc-bin (default: truffle's version)
-
+      version: "0.8.19",   
     }
   },
 };
