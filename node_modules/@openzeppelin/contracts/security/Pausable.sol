@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-// OpenZeppelin Contracts (last updated v4.7.0) (security/Pausable.sol)
 
 pragma solidity ^0.8.0;
 
@@ -35,6 +34,13 @@ abstract contract Pausable is Context {
     }
 
     /**
+     * @dev Returns true if the contract is paused, and false otherwise.
+     */
+    function paused() public view virtual returns (bool) {
+        return _paused;
+    }
+
+    /**
      * @dev Modifier to make a function callable only when the contract is not paused.
      *
      * Requirements:
@@ -42,7 +48,7 @@ abstract contract Pausable is Context {
      * - The contract must not be paused.
      */
     modifier whenNotPaused() {
-        _requireNotPaused();
+        require(!paused(), "Pausable: paused");
         _;
     }
 
@@ -54,29 +60,8 @@ abstract contract Pausable is Context {
      * - The contract must be paused.
      */
     modifier whenPaused() {
-        _requirePaused();
-        _;
-    }
-
-    /**
-     * @dev Returns true if the contract is paused, and false otherwise.
-     */
-    function paused() public view virtual returns (bool) {
-        return _paused;
-    }
-
-    /**
-     * @dev Throws if the contract is paused.
-     */
-    function _requireNotPaused() internal view virtual {
-        require(!paused(), "Pausable: paused");
-    }
-
-    /**
-     * @dev Throws if the contract is not paused.
-     */
-    function _requirePaused() internal view virtual {
         require(paused(), "Pausable: not paused");
+        _;
     }
 
     /**
