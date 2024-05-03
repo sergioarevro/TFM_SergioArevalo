@@ -1,0 +1,29 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ClockMock",
+  "sourceName": "contracts/ERC1400/mocks/Clock.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "getTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50608a8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063557ed1ba14602d575b600080fd5b60336047565b604051603e9190604b565b60405180910390f35b4290565b9081526020019056fea2646970667358221220e1e91538b44128ed4b3cea31b38ffd528c6fe5f64561711569fb9ed5be03a35464736f6c63430008000033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063557ed1ba14602d575b600080fd5b60336047565b604051603e9190604b565b60405180910390f35b4290565b9081526020019056fea2646970667358221220e1e91538b44128ed4b3cea31b38ffd528c6fe5f64561711569fb9ed5be03a35464736f6c63430008000033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

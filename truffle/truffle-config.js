@@ -12,6 +12,7 @@ module.exports = {
       host: "localhost",
       port: 8545,
       network_id: "*",
+      gas: "0x1ffffffffffffe",
       gasPrice: 0,
       provider: hdWalletProvider,
      }
@@ -25,14 +26,13 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "^0.8.0",
-      settings: {
-        optimizer: {
-          enabled: true, // Default: false
-          runs: 0, // Default: 200
-        },
-      },
-      //version: "0.8.20",
+      version: "0.8.0",
+      //settings: {
+        //optimizer: {
+          //enabled: true, // Default: false
+          //runs: 100, // Default: 200
+        //},
+      //},
     }
   },
 };
