@@ -1,0 +1,519 @@
+{
+  "contractName": "ClockMock",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "getTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getTime()\":{\"details\":\"Get time on chain.\",\"returns\":{\"_0\":\"block.timestamp.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/mocks/Clock.sol\":\"ClockMock\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"project:/contracts/mocks/Clock.sol\":{\"keccak256\":\"0x82bd077b02e629248b31b87dfc9e4e1e5ed02be47a0de80cc19863cd8ffb6433\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://972a4f05ac3ed6e79971060b7af9e524603e77c7e4d623ca5f47ec64bd5aadb0\",\"dweb:/ipfs/QmPuhMXLPJMeEpWhfBeof1eY2UYyTsomH2Y5khSKsJd3jR\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50607680601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063557ed1ba14602d575b600080fd5b4260405190815260200160405180910390f3fea2646970667358221220505103c77e2b67bb1dcc135c8cfaa0011df67ad027b50059b7086b44eee6067764736f6c63430008070033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063557ed1ba14602d575b600080fd5b4260405190815260200160405180910390f3fea2646970667358221220505103c77e2b67bb1dcc135c8cfaa0011df67ad027b50059b7086b44eee6067764736f6c63430008070033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:193:71",
+        "statements": [
+          {
+            "nodeType": "YulBlock",
+            "src": "6:3:71",
+            "statements": []
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "115:76:71",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "125:26:71",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "137:9:71"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "148:2:71",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "133:3:71"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "133:18:71"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "125:4:71"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "167:9:71"
+                      },
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "178:6:71"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "160:6:71"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "160:25:71"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "160:25:71"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "84:9:71",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "95:6:71",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "106:4:71",
+                "type": ""
+              }
+            ],
+            "src": "14:177:71"
+          }
+        ]
+      },
+      "contents": "{\n    { }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n}",
+      "id": 71,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "108:202:44:-:0;;;132:16;;;;;;;;;;108:202;;;;;;",
+  "deployedSourceMap": "108:202:44:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;223:84;287:15;223:84;;160:25:71;;;148:2;133:18;223:84:44;;;;;;",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\n// MOCK CONTRACT TO RETRIEVE TIME ON CHAIN\n\ncontract ClockMock {\n\n  constructor() {}\n\n  /**\n   * @dev Get time on chain.\n   * @return block.timestamp.\n   */\n  function getTime() external view returns (uint256) {\n    return block.timestamp;\n  }\n\n}",
+  "sourcePath": "/Users/sergio/Downloads/UniversalToken-master/contracts/mocks/Clock.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/mocks/Clock.sol",
+    "exportedSymbols": {
+      "ClockMock": [
+        12662
+      ]
+    },
+    "id": 12663,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12647,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:44"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 12662,
+        "linearizedBaseContracts": [
+          12662
+        ],
+        "name": "ClockMock",
+        "nameLocation": "117:9:44",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 12650,
+              "nodeType": "Block",
+              "src": "146:2:44",
+              "statements": []
+            },
+            "id": 12651,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12648,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:44"
+            },
+            "returnParameters": {
+              "id": 12649,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "146:0:44"
+            },
+            "scope": 12662,
+            "src": "132:16:44",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 12660,
+              "nodeType": "Block",
+              "src": "274:33:44",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 12657,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4294967292,
+                      "src": "287:5:44",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 12658,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "src": "287:15:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 12656,
+                  "id": 12659,
+                  "nodeType": "Return",
+                  "src": "280:22:44"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 12652,
+              "nodeType": "StructuredDocumentation",
+              "src": "152:68:44",
+              "text": " @dev Get time on chain.\n @return block.timestamp."
+            },
+            "functionSelector": "557ed1ba",
+            "id": 12661,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTime",
+            "nameLocation": "232:7:44",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12653,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "239:2:44"
+            },
+            "returnParameters": {
+              "id": 12656,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12655,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12661,
+                  "src": "265:7:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12654,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "264:9:44"
+            },
+            "scope": 12662,
+            "src": "223:84:44",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12663,
+        "src": "108:202:44",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:271:44"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/mocks/Clock.sol",
+    "exportedSymbols": {
+      "ClockMock": [
+        12662
+      ]
+    },
+    "id": 12663,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12647,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:44"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 12662,
+        "linearizedBaseContracts": [
+          12662
+        ],
+        "name": "ClockMock",
+        "nameLocation": "117:9:44",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 12650,
+              "nodeType": "Block",
+              "src": "146:2:44",
+              "statements": []
+            },
+            "id": 12651,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12648,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:44"
+            },
+            "returnParameters": {
+              "id": 12649,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "146:0:44"
+            },
+            "scope": 12662,
+            "src": "132:16:44",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 12660,
+              "nodeType": "Block",
+              "src": "274:33:44",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 12657,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4294967292,
+                      "src": "287:5:44",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 12658,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "src": "287:15:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 12656,
+                  "id": 12659,
+                  "nodeType": "Return",
+                  "src": "280:22:44"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 12652,
+              "nodeType": "StructuredDocumentation",
+              "src": "152:68:44",
+              "text": " @dev Get time on chain.\n @return block.timestamp."
+            },
+            "functionSelector": "557ed1ba",
+            "id": 12661,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTime",
+            "nameLocation": "232:7:44",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12653,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "239:2:44"
+            },
+            "returnParameters": {
+              "id": 12656,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12655,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12661,
+                  "src": "265:7:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12654,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "264:9:44"
+            },
+            "scope": 12662,
+            "src": "223:84:44",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12663,
+        "src": "108:202:44",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:271:44"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2024-05-07T14:52:02.257Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getTime()": {
+        "details": "Get time on chain.",
+        "returns": {
+          "_0": "block.timestamp."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,1388 @@
+{
+  "contractName": "IERC1643",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "uri",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "documentHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "DocumentRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "uri",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "documentHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "DocumentUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getDocument",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_name",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "_uri",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_documentHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setDocument",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "removeDocument",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllDocuments",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"uri\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"documentHash\",\"type\":\"bytes32\"}],\"name\":\"DocumentRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"uri\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"documentHash\",\"type\":\"bytes32\"}],\"name\":\"DocumentUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getAllDocuments\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_name\",\"type\":\"bytes32\"}],\"name\":\"getDocument\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_name\",\"type\":\"bytes32\"}],\"name\":\"removeDocument\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_name\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"_uri\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"_documentHash\",\"type\":\"bytes32\"}],\"name\":\"setDocument\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"See https://github.com/SecurityTokenStandard/EIP-Spec\",\"kind\":\"dev\",\"methods\":{},\"title\":\"IERC1643 Document Management (part of the ERC1400 Security Token Standards)\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interface/IERC1643.sol\":\"IERC1643\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"project:/contracts/interface/IERC1643.sol\":{\"keccak256\":\"0xf742bf58825da4284363ab3571edb627777df9a6a20856b9cc8bbbf31205d1d8\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://041f2b44632942ea03c0a8667d9f7db9dc7be058d7e31eb83f69501f7f1ee2b9\",\"dweb:/ipfs/Qmbik5bq1RKkGaqFcJ1aiL4pPjwgxPfRuH9D8tKNkqmyvJ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\n/// @title IERC1643 Document Management (part of the ERC1400 Security Token Standards)\n/// @dev See https://github.com/SecurityTokenStandard/EIP-Spec\n\ninterface IERC1643 {\n\n    // Document Management\n    function getDocument(bytes32 _name) external view returns (string memory, bytes32, uint256);\n    function setDocument(bytes32 _name, string memory _uri, bytes32 _documentHash) external;\n    function removeDocument(bytes32 _name) external;\n    function getAllDocuments() external view returns (bytes32[] memory);\n\n    // Document Events\n    event DocumentRemoved(bytes32 indexed name, string uri, bytes32 documentHash);\n    event DocumentUpdated(bytes32 indexed name, string uri, bytes32 documentHash);\n\n}",
+  "sourcePath": "/Users/sergio/Downloads/UniversalToken-master/contracts/interface/IERC1643.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interface/IERC1643.sol",
+    "exportedSymbols": {
+      "IERC1643": [
+        12380
+      ]
+    },
+    "id": 12381,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12331,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 12332,
+          "nodeType": "StructuredDocumentation",
+          "src": "64:150:38",
+          "text": "@title IERC1643 Document Management (part of the ERC1400 Security Token Standards)\n @dev See https://github.com/SecurityTokenStandard/EIP-Spec"
+        },
+        "fullyImplemented": false,
+        "id": 12380,
+        "linearizedBaseContracts": [
+          12380
+        ],
+        "name": "IERC1643",
+        "nameLocation": "225:8:38",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "b10d6b41",
+            "id": 12343,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDocument",
+            "nameLocation": "277:11:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12334,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "297:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "289:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12333,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:15:38"
+            },
+            "returnParameters": {
+              "id": 12342,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12337,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "327:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12336,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12339,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "342:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12338,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "342:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12341,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "351:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12340,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "326:33:38"
+            },
+            "scope": 12380,
+            "src": "268:92:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "010648ca",
+            "id": 12352,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDocument",
+            "nameLocation": "374:11:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12345,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "394:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12352,
+                  "src": "386:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12344,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12347,
+                  "mutability": "mutable",
+                  "name": "_uri",
+                  "nameLocation": "415:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12352,
+                  "src": "401:18:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12346,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12349,
+                  "mutability": "mutable",
+                  "name": "_documentHash",
+                  "nameLocation": "429:13:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12352,
+                  "src": "421:21:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12348,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "421:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "385:58:38"
+            },
+            "returnParameters": {
+              "id": 12351,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "452:0:38"
+            },
+            "scope": 12380,
+            "src": "365:88:38",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c3501848",
+            "id": 12357,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeDocument",
+            "nameLocation": "467:14:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12354,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "490:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12357,
+                  "src": "482:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12353,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "482:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "481:15:38"
+            },
+            "returnParameters": {
+              "id": 12356,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "505:0:38"
+            },
+            "scope": 12380,
+            "src": "458:48:38",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9fa5f50b",
+            "id": 12363,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllDocuments",
+            "nameLocation": "520:15:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12358,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "535:2:38"
+            },
+            "returnParameters": {
+              "id": 12362,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12361,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12363,
+                  "src": "561:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 12359,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "561:7:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 12360,
+                    "nodeType": "ArrayTypeName",
+                    "src": "561:9:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "560:18:38"
+            },
+            "scope": 12380,
+            "src": "511:68:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "id": 12371,
+            "name": "DocumentRemoved",
+            "nameLocation": "614:15:38",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12365,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "646:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12371,
+                  "src": "630:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12364,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12367,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "uri",
+                  "nameLocation": "659:3:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12371,
+                  "src": "652:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12366,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "652:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12369,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "documentHash",
+                  "nameLocation": "672:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12371,
+                  "src": "664:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12368,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "629:56:38"
+            },
+            "src": "608:78:38"
+          },
+          {
+            "anonymous": false,
+            "id": 12379,
+            "name": "DocumentUpdated",
+            "nameLocation": "697:15:38",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12378,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12373,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "729:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12379,
+                  "src": "713:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12372,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "713:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12375,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "uri",
+                  "nameLocation": "742:3:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12379,
+                  "src": "735:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12374,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12377,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "documentHash",
+                  "nameLocation": "755:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12379,
+                  "src": "747:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12376,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "712:56:38"
+            },
+            "src": "691:78:38"
+          }
+        ],
+        "scope": 12381,
+        "src": "215:557:38",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:733:38"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interface/IERC1643.sol",
+    "exportedSymbols": {
+      "IERC1643": [
+        12380
+      ]
+    },
+    "id": 12381,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12331,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 12332,
+          "nodeType": "StructuredDocumentation",
+          "src": "64:150:38",
+          "text": "@title IERC1643 Document Management (part of the ERC1400 Security Token Standards)\n @dev See https://github.com/SecurityTokenStandard/EIP-Spec"
+        },
+        "fullyImplemented": false,
+        "id": 12380,
+        "linearizedBaseContracts": [
+          12380
+        ],
+        "name": "IERC1643",
+        "nameLocation": "225:8:38",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "b10d6b41",
+            "id": 12343,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDocument",
+            "nameLocation": "277:11:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12334,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "297:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "289:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12333,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:15:38"
+            },
+            "returnParameters": {
+              "id": 12342,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12337,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "327:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12336,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12339,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "342:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12338,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "342:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12341,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12343,
+                  "src": "351:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12340,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "326:33:38"
+            },
+            "scope": 12380,
+            "src": "268:92:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "010648ca",
+            "id": 12352,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDocument",
+            "nameLocation": "374:11:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12345,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "394:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12352,
+                  "src": "386:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12344,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12347,
+                  "mutability": "mutable",
+                  "name": "_uri",
+                  "nameLocation": "415:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12352,
+                  "src": "401:18:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12346,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12349,
+                  "mutability": "mutable",
+                  "name": "_documentHash",
+                  "nameLocation": "429:13:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12352,
+                  "src": "421:21:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12348,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "421:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "385:58:38"
+            },
+            "returnParameters": {
+              "id": 12351,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "452:0:38"
+            },
+            "scope": 12380,
+            "src": "365:88:38",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c3501848",
+            "id": 12357,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeDocument",
+            "nameLocation": "467:14:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12354,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "490:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12357,
+                  "src": "482:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12353,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "482:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "481:15:38"
+            },
+            "returnParameters": {
+              "id": 12356,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "505:0:38"
+            },
+            "scope": 12380,
+            "src": "458:48:38",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9fa5f50b",
+            "id": 12363,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllDocuments",
+            "nameLocation": "520:15:38",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12358,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "535:2:38"
+            },
+            "returnParameters": {
+              "id": 12362,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12361,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12363,
+                  "src": "561:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 12359,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "561:7:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 12360,
+                    "nodeType": "ArrayTypeName",
+                    "src": "561:9:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "560:18:38"
+            },
+            "scope": 12380,
+            "src": "511:68:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "id": 12371,
+            "name": "DocumentRemoved",
+            "nameLocation": "614:15:38",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12365,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "646:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12371,
+                  "src": "630:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12364,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12367,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "uri",
+                  "nameLocation": "659:3:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12371,
+                  "src": "652:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12366,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "652:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12369,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "documentHash",
+                  "nameLocation": "672:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12371,
+                  "src": "664:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12368,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "629:56:38"
+            },
+            "src": "608:78:38"
+          },
+          {
+            "anonymous": false,
+            "id": 12379,
+            "name": "DocumentUpdated",
+            "nameLocation": "697:15:38",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12378,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12373,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "729:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12379,
+                  "src": "713:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12372,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "713:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12375,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "uri",
+                  "nameLocation": "742:3:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12379,
+                  "src": "735:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12374,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12377,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "documentHash",
+                  "nameLocation": "755:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12379,
+                  "src": "747:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 12376,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "712:56:38"
+            },
+            "src": "691:78:38"
+          }
+        ],
+        "scope": 12381,
+        "src": "215:557:38",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:733:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2024-05-07T14:52:02.250Z",
+  "devdoc": {
+    "details": "See https://github.com/SecurityTokenStandard/EIP-Spec",
+    "kind": "dev",
+    "methods": {},
+    "title": "IERC1643 Document Management (part of the ERC1400 Security Token Standards)",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

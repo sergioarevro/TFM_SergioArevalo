@@ -1,0 +1,90 @@
+require('dotenv').config();
+require('babel-register');
+require('babel-polyfill');
+
+const HDWalletProvider = require('truffle-hdwallet-provider');
+
+const providerWithMnemonic = (mnemonic, rpcEndpoint) => () =>
+  new HDWalletProvider(mnemonic, rpcEndpoint);
+
+const infuraProvider = network => providerWithMnemonic(
+  process.env.MNEMONIC || '',
+  `https://${network}.infura.io/v3/${process.env.INFURA_API_KEY}`
+);
+
+const privateKey = "8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63";
+const nodeUrl = "http://localhost:8545";
+const hdWalletProvider = new HDWalletProvider(
+  privateKey,
+  nodeUrl,
+);
+
+const ropstenProvider = process.env.SOLIDITY_COVERAGE
+  ? undefined
+  : infuraProvider('ropsten');
+
+module.exports = {
+  networks: {
+    besu: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+      //gas: "0x1ffffffffffffe",
+      gasPrice: 0,
+      provider: hdWalletProvider
+     },
+
+    development: {
+      host: 'localhost',
+      port: 7545,
+      network_id: '*', // eslint-disable-line camelcase
+      gasPrice: 0x01,
+    },
+    test: {
+      host: "localhost",
+      port: 7545,
+      network_id: "*",
+      gasPrice: 0x01,
+    },
+    ropsten: {
+      provider: ropstenProvider,
+      network_id: 3, // eslint-disable-line camelcase
+      gasPrice: 5000000000,
+    },
+    coverage: {
+      host: 'localhost',
+      network_id: '*', // eslint-disable-line camelcase
+      port: 8555,
+      gas: 0xfffffffffff,
+      gasPrice: 0x01,
+      disableConfirmationListener: true,
+    },
+    ganache: {
+      host: 'localhost',
+      port: 7545,
+      network_id: '*', // eslint-disable-line camelcase
+    },
+    dotEnvNetwork: {
+      provider: providerWithMnemonic(
+        process.env.MNEMONIC,
+        process.env.RPC_ENDPOINT
+      ),
+      network_id: parseInt(process.env.NETWORK_ID) || '*', // eslint-disable-line camelcase
+    },
+  },
+  plugins: ["solidity-coverage", "truffle-contract-size", "truffle-plugin-verify"],
+  compilers: {
+    solc: {
+      version: '0.8.7',
+      settings: {
+        optimizer: {
+          enabled: true, // Default: false
+          runs: 0, // Default: 200
+        },
+      },
+    },
+  },
+  api_keys: {
+    etherscan: process.env.ETHERSCAN_API_KEY
+  },
+};

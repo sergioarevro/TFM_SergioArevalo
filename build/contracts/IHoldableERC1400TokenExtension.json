@@ -1,0 +1,657 @@
+{
+  "contractName": "IHoldableERC1400TokenExtension",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "holdId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "lockPreimage",
+          "type": "bytes32"
+        }
+      ],
+      "name": "executeHold",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "holdId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "retrieveHoldData",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "partition",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "notary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "expiration",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "secretHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "secret",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "enum HoldStatusCode",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"holdId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"lockPreimage\",\"type\":\"bytes32\"}],\"name\":\"executeHold\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"holdId\",\"type\":\"bytes32\"}],\"name\":\"retrieveHoldData\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"partition\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"notary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expiration\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"secretHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"secret\",\"type\":\"bytes32\"},{\"internalType\":\"enum HoldStatusCode\",\"name\":\"status\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interface/IHoldableERC1400TokenExtension.sol\":\"IHoldableERC1400TokenExtension\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"project:/contracts/interface/HoldStatusCode.sol\":{\"keccak256\":\"0x6deb0acca580b9e9474d8dc953a759311c1f77876fa06cf672550970db0289a6\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://603ba40c099b8affdd7a25a2922b7a13fe30a52d0922cc10d669723dac80de05\",\"dweb:/ipfs/QmWE3hHWtcJqaL1g2rU3ztTxwJMUJnMQS5ZdA2QvChpRo6\"]},\"project:/contracts/interface/IHoldableERC1400TokenExtension.sol\":{\"keccak256\":\"0xc37ba418eac8f7eff956bc790514cd1cc04d2fedf5f69dcb91274ffcfca41b09\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://85c956f11c5748242815ebdfa315758d242641d97a34a9ddfdceed43cb0f8fac\",\"dweb:/ipfs/QmeCGZUzmrb3D4RNStwgrHRNAsVLy9kXppLdpq6fAkkGXN\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\nimport \"./HoldStatusCode.sol\";\n\ninterface IHoldableERC1400TokenExtension {\n    function executeHold(\n        address token,\n        bytes32 holdId,\n        uint256 value,\n        bytes32 lockPreimage\n    ) external;\n\n    function retrieveHoldData(address token, bytes32 holdId) external view returns (\n        bytes32 partition,\n        address sender,\n        address recipient,\n        address notary,\n        uint256 value,\n        uint256 expiration,\n        bytes32 secretHash,\n        bytes32 secret,\n        HoldStatusCode status\n    );\n}",
+  "sourcePath": "/Users/sergio/Downloads/UniversalToken-master/contracts/interface/IHoldableERC1400TokenExtension.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interface/IHoldableERC1400TokenExtension.sol",
+    "exportedSymbols": {
+      "HoldStatusCode": [
+        5396
+      ],
+      "IHoldableERC1400TokenExtension": [
+        5624
+      ]
+    },
+    "id": 5625,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5585,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:20"
+      },
+      {
+        "absolutePath": "project:/contracts/interface/HoldStatusCode.sol",
+        "file": "./HoldStatusCode.sol",
+        "id": 5586,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 5625,
+        "sourceUnit": 5397,
+        "src": "64:30:20",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 5624,
+        "linearizedBaseContracts": [
+          5624
+        ],
+        "name": "IHoldableERC1400TokenExtension",
+        "nameLocation": "106:30:20",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "54c6f08c",
+            "id": 5597,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nameLocation": "152:11:20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5595,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5588,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "181:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5597,
+                  "src": "173:13:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5587,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "173:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5590,
+                  "mutability": "mutable",
+                  "name": "holdId",
+                  "nameLocation": "204:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5597,
+                  "src": "196:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5589,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5592,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "228:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5597,
+                  "src": "220:13:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5591,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5594,
+                  "mutability": "mutable",
+                  "name": "lockPreimage",
+                  "nameLocation": "251:12:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5597,
+                  "src": "243:20:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5593,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:106:20"
+            },
+            "returnParameters": {
+              "id": 5596,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "278:0:20"
+            },
+            "scope": 5624,
+            "src": "143:136:20",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "12da4de6",
+            "id": 5623,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveHoldData",
+            "nameLocation": "294:16:20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5602,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5599,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "319:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "311:13:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5598,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5601,
+                  "mutability": "mutable",
+                  "name": "holdId",
+                  "nameLocation": "334:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "326:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5600,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "326:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "310:31:20"
+            },
+            "returnParameters": {
+              "id": 5622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5604,
+                  "mutability": "mutable",
+                  "name": "partition",
+                  "nameLocation": "382:9:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "374:17:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5603,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5606,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "409:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "401:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5605,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5608,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "433:9:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "425:17:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5607,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "425:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5610,
+                  "mutability": "mutable",
+                  "name": "notary",
+                  "nameLocation": "460:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "452:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5612,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "484:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "476:13:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5611,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5614,
+                  "mutability": "mutable",
+                  "name": "expiration",
+                  "nameLocation": "507:10:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "499:18:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5613,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "499:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5616,
+                  "mutability": "mutable",
+                  "name": "secretHash",
+                  "nameLocation": "535:10:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "527:18:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5615,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "527:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5618,
+                  "mutability": "mutable",
+                  "name": "secret",
+                  "nameLocation": "563:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "555:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 5617,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "555:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5621,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "594:6:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5623,
+                  "src": "579:21:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_HoldStatusCode_$5396",
+                    "typeString": "enum HoldStatusCode"
+                  },
+                  "typeName": {
+                    "id": 5620,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 5619,
+                      "name": "HoldStatusCode",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 5396,
+                      "src": "579:14:20"
+                    },
+                    "referencedDeclaration": 5396,
+                    "src": "579:14:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_HoldStatusCode_$5396",
+                      "typeString": "enum HoldStatusCode"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "364:242:20"
+            },
+            "scope": 5624,
+            "src": "285:322:20",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5625,
+        "src": "96:513:20",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:570:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-07T16:50:54.376Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
