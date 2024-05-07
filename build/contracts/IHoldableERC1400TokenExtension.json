@@ -103,7 +103,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\nimport \"./HoldStatusCode.sol\";\n\ninterface IHoldableERC1400TokenExtension {\n    function executeHold(\n        address token,\n        bytes32 holdId,\n        uint256 value,\n        bytes32 lockPreimage\n    ) external;\n\n    function retrieveHoldData(address token, bytes32 holdId) external view returns (\n        bytes32 partition,\n        address sender,\n        address recipient,\n        address notary,\n        uint256 value,\n        uint256 expiration,\n        bytes32 secretHash,\n        bytes32 secret,\n        HoldStatusCode status\n    );\n}",
-  "sourcePath": "/Users/sergio/Downloads/UniversalToken-master/contracts/interface/IHoldableERC1400TokenExtension.sol",
+  "sourcePath": "/Users/sergio/Desktop/project/contracts/interface/IHoldableERC1400TokenExtension.sol",
   "ast": {
     "absolutePath": "project:/contracts/interface/IHoldableERC1400TokenExtension.sol",
     "exportedSymbols": {
@@ -643,7 +643,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-05-07T16:50:54.376Z",
+  "updatedAt": "2024-05-07T22:41:49.892Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

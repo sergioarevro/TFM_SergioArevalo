@@ -18,7 +18,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\nimport \"../extensions/tokenExtensions/ERC1400TokensValidator.sol\";\n\n/**\n @notice Interface to the Minterrole contract\n*/\ninterface IMinterMock {\n  function renounceMinter() external;\n}\n\ncontract ERC1400TokensValidatorMock is ERC1400TokensValidator {\n\n  function renounceMinter(address token) external onlyTokenController(token) {\n    IMinterMock(token).renounceMinter();\n  }\n\n}",
-  "sourcePath": "/Users/sergio/Downloads/UniversalToken-master/contracts/mocks/ERC1400TokensValidatorMock.sol",
+  "sourcePath": "/Users/sergio/Desktop/project/contracts/mocks/ERC1400TokensValidatorMock.sol",
   "ast": {
     "absolutePath": "project:/contracts/mocks/ERC1400TokensValidatorMock.sol",
     "exportedSymbols": {
@@ -407,7 +407,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-05-07T16:50:54.392Z",
+  "updatedAt": "2024-05-07T22:41:49.907Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
