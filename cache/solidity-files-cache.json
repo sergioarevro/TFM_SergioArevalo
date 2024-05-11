@@ -1,0 +1,260 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/sergio/Desktop/TFM/project/contracts/MyContract.sol": {
+      "lastModificationDate": 1715442599710,
+      "contentHash": "23fad787979a75764cdbab4776fa27dd",
+      "sourceName": "contracts/MyContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyContract"
+      ]
+    },
+    "/Users/sergio/Desktop/TFM/project/contracts/oracle/DataOracle.sol": {
+      "lastModificationDate": 1715440162125,
+      "contentHash": "d9f00de56b02f4f21abcd7e80b2027cc",
+      "sourceName": "contracts/oracle/DataOracle.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./OracleCallerInterface.sol",
+        "./DataOracleInterface.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DataOracle"
+      ]
+    },
+    "/Users/sergio/Desktop/TFM/project/contracts/oracle/OracleCallerInterface.sol": {
+      "lastModificationDate": 1715440162126,
+      "contentHash": "3d72c82762ea5ceef73b98d87ce662cc",
+      "sourceName": "contracts/oracle/OracleCallerInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OracleCallerInterface"
+      ]
+    },
+    "/Users/sergio/Desktop/TFM/project/contracts/oracle/DataOracleInterface.sol": {
+      "lastModificationDate": 1715440162127,
+      "contentHash": "942f12f30c8cdcef1144cfc3d0ed4717",
+      "sourceName": "contracts/oracle/DataOracleInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DataOracleInterface"
+      ]
+    },
+    "/Users/sergio/Desktop/TFM/project/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1715446154348,
+      "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/sergio/Desktop/TFM/project/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1715446154324,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/sergio/Desktop/TFM/project/contracts/oracle/OracleCaller.sol": {
+      "lastModificationDate": 1715440162125,
+      "contentHash": "745f7caa8b92e2294b9efdded238bd9e",
+      "sourceName": "contracts/oracle/OracleCaller.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./DataOracleInterface.sol",
+        "./OracleCallerInterface.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OracleCaller"
+      ]
+    }
+  }
+}

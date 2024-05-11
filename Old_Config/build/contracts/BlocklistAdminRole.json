@@ -1,0 +1,1855 @@
+{
+  "contractName": "BlocklistAdminRole",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "BlocklistAdminAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "BlocklistAdminRemoved",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isBlocklistAdmin",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addBlocklistAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeBlocklistAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "renounceBlocklistAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"BlocklistAdminAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"BlocklistAdminRemoved\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addBlocklistAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isBlocklistAdmin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeBlocklistAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"renounceBlocklistAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"BlocklistAdmins are responsible for assigning and removing Blocklisted accounts.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"BlocklistAdminRole\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/roles/BlocklistAdminRole.sol\":\"BlocklistAdminRole\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"project:/contracts/roles/BlocklistAdminRole.sol\":{\"keccak256\":\"0x24a8b578fbcd3f7d24db2c7aaa91cd0112dff5f8c51cf0079cc026354ed74f84\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://a01920f37e14015229e61c326c81a4a84f92933b56b2b5b460d568aa96ae9354\",\"dweb:/ipfs/QmdFpQhsgaKy279ibXre46zPs5zSZrdHBHWgFSLbJWjHuE\"]},\"project:/contracts/roles/Roles.sol\":{\"keccak256\":\"0x5a50db74c6506a1fa2bf12dc2a584e9131d27e011ca11f848c3eefcc87ccf9e3\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://ef0289f75d1b7b3f0dd7dd815ef7bff742f38e137605fbf3c4a3b5e3a6b44b6b\",\"dweb:/ipfs/QmTdoBbU4PhqcApxJmbJxVVVJLpBTMKofy9USEYjGnariR\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\n/*\n * This code has not been reviewed.\n * Do not use or deploy this code before reviewing it personally first.\n */\npragma solidity ^0.8.0;\n\nimport \"./Roles.sol\";\n\n\n/**\n * @title BlocklistAdminRole\n * @dev BlocklistAdmins are responsible for assigning and removing Blocklisted accounts.\n */\nabstract contract BlocklistAdminRole {\n    using Roles for Roles.Role;\n\n    event BlocklistAdminAdded(address indexed token, address indexed account);\n    event BlocklistAdminRemoved(address indexed token, address indexed account);\n\n    // Mapping from token to token blocklist admins.\n    mapping(address => Roles.Role) private _blocklistAdmins;\n\n    modifier onlyBlocklistAdmin(address token) virtual {\n        require(isBlocklistAdmin(token, msg.sender));\n        _;\n    }\n\n    function isBlocklistAdmin(address token, address account) public view returns (bool) {\n        return _blocklistAdmins[token].has(account);\n    }\n\n    function addBlocklistAdmin(address token, address account) public onlyBlocklistAdmin(token) {\n        _addBlocklistAdmin(token, account);\n    }\n\n    function removeBlocklistAdmin(address token, address account) public onlyBlocklistAdmin(token) {\n        _removeBlocklistAdmin(token, account);\n    }\n\n    function renounceBlocklistAdmin(address token) public {\n        _removeBlocklistAdmin(token, msg.sender);\n    }\n\n    function _addBlocklistAdmin(address token, address account) internal {\n        _blocklistAdmins[token].add(account);\n        emit BlocklistAdminAdded(token, account);\n    }\n\n    function _removeBlocklistAdmin(address token, address account) internal {\n        _blocklistAdmins[token].remove(account);\n        emit BlocklistAdminRemoved(token, account);\n    }\n}",
+  "sourcePath": "/Users/sergio/Desktop/TFM/project/contracts/roles/BlocklistAdminRole.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/roles/BlocklistAdminRole.sol",
+    "exportedSymbols": {
+      "BlocklistAdminRole": [
+        13622
+      ],
+      "Roles": [
+        14244
+      ]
+    },
+    "id": 13623,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13483,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "154:23:54"
+      },
+      {
+        "absolutePath": "project:/contracts/roles/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 13484,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 13623,
+        "sourceUnit": 14245,
+        "src": "179:21:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 13485,
+          "nodeType": "StructuredDocumentation",
+          "src": "203:125:54",
+          "text": " @title BlocklistAdminRole\n @dev BlocklistAdmins are responsible for assigning and removing Blocklisted accounts."
+        },
+        "fullyImplemented": true,
+        "id": 13622,
+        "linearizedBaseContracts": [
+          13622
+        ],
+        "name": "BlocklistAdminRole",
+        "nameLocation": "347:18:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 13489,
+            "libraryName": {
+              "id": 13486,
+              "name": "Roles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 14244,
+              "src": "378:5:54"
+            },
+            "nodeType": "UsingForDirective",
+            "src": "372:27:54",
+            "typeName": {
+              "id": 13488,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 13487,
+                "name": "Roles.Role",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 14163,
+                "src": "388:10:54"
+              },
+              "referencedDeclaration": 14163,
+              "src": "388:10:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Role_$14163_storage_ptr",
+                "typeString": "struct Roles.Role"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "id": 13495,
+            "name": "BlocklistAdminAdded",
+            "nameLocation": "411:19:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13491,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "447:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13495,
+                  "src": "431:21:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13490,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13493,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "470:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13495,
+                  "src": "454:23:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13492,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "454:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "430:48:54"
+            },
+            "src": "405:74:54"
+          },
+          {
+            "anonymous": false,
+            "id": 13501,
+            "name": "BlocklistAdminRemoved",
+            "nameLocation": "490:21:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13500,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13497,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "528:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13501,
+                  "src": "512:21:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13496,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "512:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13499,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "551:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13501,
+                  "src": "535:23:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13498,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "535:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "511:48:54"
+            },
+            "src": "484:76:54"
+          },
+          {
+            "constant": false,
+            "id": 13506,
+            "mutability": "mutable",
+            "name": "_blocklistAdmins",
+            "nameLocation": "658:16:54",
+            "nodeType": "VariableDeclaration",
+            "scope": 13622,
+            "src": "619:55:54",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+              "typeString": "mapping(address => struct Roles.Role)"
+            },
+            "typeName": {
+              "id": 13505,
+              "keyType": {
+                "id": 13502,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "627:7:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "619:30:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                "typeString": "mapping(address => struct Roles.Role)"
+              },
+              "valueType": {
+                "id": 13504,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 13503,
+                  "name": "Roles.Role",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 14163,
+                  "src": "638:10:54"
+                },
+                "referencedDeclaration": 14163,
+                "src": "638:10:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Role_$14163_storage_ptr",
+                  "typeString": "struct Roles.Role"
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 13519,
+              "nodeType": "Block",
+              "src": "732:72:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 13512,
+                            "name": "token",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 13508,
+                            "src": "767:5:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 13513,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4294967281,
+                              "src": "774:3:54",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 13514,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "774:10:54",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 13511,
+                          "name": "isBlocklistAdmin",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13537,
+                          "src": "750:16:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address,address) view returns (bool)"
+                          }
+                        },
+                        "id": 13515,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "750:35:54",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 13510,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "742:7:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 13516,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "742:44:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13517,
+                  "nodeType": "ExpressionStatement",
+                  "src": "742:44:54"
+                },
+                {
+                  "id": 13518,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "796:1:54"
+                }
+              ]
+            },
+            "id": 13520,
+            "name": "onlyBlocklistAdmin",
+            "nameLocation": "690:18:54",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 13509,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13508,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "717:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13520,
+                  "src": "709:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13507,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "709:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "708:15:54"
+            },
+            "src": "681:123:54",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13536,
+              "nodeType": "Block",
+              "src": "895:60:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13533,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13524,
+                        "src": "940:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 13529,
+                          "name": "_blocklistAdmins",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13506,
+                          "src": "912:16:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                            "typeString": "mapping(address => struct Roles.Role storage ref)"
+                          }
+                        },
+                        "id": 13531,
+                        "indexExpression": {
+                          "id": 13530,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13522,
+                          "src": "929:5:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "912:23:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$14163_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 13532,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "has",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14243,
+                      "src": "912:27:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$14163_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$14163_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 13534,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "912:36:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 13528,
+                  "id": 13535,
+                  "nodeType": "Return",
+                  "src": "905:43:54"
+                }
+              ]
+            },
+            "functionSelector": "a28e7c02",
+            "id": 13537,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isBlocklistAdmin",
+            "nameLocation": "819:16:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13522,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "844:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13537,
+                  "src": "836:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13521,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "836:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13524,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "859:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13537,
+                  "src": "851:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13523,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "851:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "835:32:54"
+            },
+            "returnParameters": {
+              "id": 13528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13527,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13537,
+                  "src": "889:4:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13526,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "889:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "888:6:54"
+            },
+            "scope": 13622,
+            "src": "810:145:54",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13552,
+              "nodeType": "Block",
+              "src": "1053:51:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13548,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13539,
+                        "src": "1082:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13549,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13541,
+                        "src": "1089:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13547,
+                      "name": "_addBlocklistAdmin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13601,
+                      "src": "1063:18:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13550,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1063:34:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13551,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1063:34:54"
+                }
+              ]
+            },
+            "functionSelector": "c428b202",
+            "id": 13553,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 13544,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 13539,
+                    "src": "1046:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 13545,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 13543,
+                  "name": "onlyBlocklistAdmin",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 13520,
+                  "src": "1027:18:54"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1027:25:54"
+              }
+            ],
+            "name": "addBlocklistAdmin",
+            "nameLocation": "970:17:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13542,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13539,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "996:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13553,
+                  "src": "988:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13538,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "988:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13541,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1011:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13553,
+                  "src": "1003:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13540,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1003:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "987:32:54"
+            },
+            "returnParameters": {
+              "id": 13546,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1053:0:54"
+            },
+            "scope": 13622,
+            "src": "961:143:54",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13568,
+              "nodeType": "Block",
+              "src": "1205:54:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13564,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13555,
+                        "src": "1237:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13565,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13557,
+                        "src": "1244:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13563,
+                      "name": "_removeBlocklistAdmin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13621,
+                      "src": "1215:21:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13566,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1215:37:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13567,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1215:37:54"
+                }
+              ]
+            },
+            "functionSelector": "ebf42f77",
+            "id": 13569,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 13560,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 13555,
+                    "src": "1198:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 13561,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 13559,
+                  "name": "onlyBlocklistAdmin",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 13520,
+                  "src": "1179:18:54"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1179:25:54"
+              }
+            ],
+            "name": "removeBlocklistAdmin",
+            "nameLocation": "1119:20:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13555,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1148:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13569,
+                  "src": "1140:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13554,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13557,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1163:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13569,
+                  "src": "1155:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13556,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1155:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1139:32:54"
+            },
+            "returnParameters": {
+              "id": 13562,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1205:0:54"
+            },
+            "scope": 13622,
+            "src": "1110:149:54",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13580,
+              "nodeType": "Block",
+              "src": "1319:57:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13575,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13571,
+                        "src": "1351:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 13576,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "1358:3:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 13577,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1358:10:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13574,
+                      "name": "_removeBlocklistAdmin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13621,
+                      "src": "1329:21:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13578,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1329:40:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13579,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1329:40:54"
+                }
+              ]
+            },
+            "functionSelector": "e323e671",
+            "id": 13581,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "renounceBlocklistAdmin",
+            "nameLocation": "1274:22:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13571,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1305:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13581,
+                  "src": "1297:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13570,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1297:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1296:15:54"
+            },
+            "returnParameters": {
+              "id": 13573,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1319:0:54"
+            },
+            "scope": 13622,
+            "src": "1265:111:54",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13600,
+              "nodeType": "Block",
+              "src": "1451:103:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13592,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13585,
+                        "src": "1489:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 13588,
+                          "name": "_blocklistAdmins",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13506,
+                          "src": "1461:16:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                            "typeString": "mapping(address => struct Roles.Role storage ref)"
+                          }
+                        },
+                        "id": 13590,
+                        "indexExpression": {
+                          "id": 13589,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13583,
+                          "src": "1478:5:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1461:23:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$14163_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 13591,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14190,
+                      "src": "1461:27:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$14163_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$14163_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 13593,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1461:36:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13594,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1461:36:54"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 13596,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13583,
+                        "src": "1532:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13597,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13585,
+                        "src": "1539:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13595,
+                      "name": "BlocklistAdminAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13495,
+                      "src": "1512:19:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13598,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1512:35:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13599,
+                  "nodeType": "EmitStatement",
+                  "src": "1507:40:54"
+                }
+              ]
+            },
+            "id": 13601,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_addBlocklistAdmin",
+            "nameLocation": "1391:18:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13586,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13583,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1418:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13601,
+                  "src": "1410:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13582,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1410:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13585,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1433:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13601,
+                  "src": "1425:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13584,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1425:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1409:32:54"
+            },
+            "returnParameters": {
+              "id": 13587,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1451:0:54"
+            },
+            "scope": 13622,
+            "src": "1382:172:54",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13620,
+              "nodeType": "Block",
+              "src": "1632:108:54",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13612,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13605,
+                        "src": "1673:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 13608,
+                          "name": "_blocklistAdmins",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13506,
+                          "src": "1642:16:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                            "typeString": "mapping(address => struct Roles.Role storage ref)"
+                          }
+                        },
+                        "id": 13610,
+                        "indexExpression": {
+                          "id": 13609,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13603,
+                          "src": "1659:5:54",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1642:23:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$14163_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 13611,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14216,
+                      "src": "1642:30:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$14163_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$14163_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 13613,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1642:39:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13614,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1642:39:54"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 13616,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13603,
+                        "src": "1718:5:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13617,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13605,
+                        "src": "1725:7:54",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13615,
+                      "name": "BlocklistAdminRemoved",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13501,
+                      "src": "1696:21:54",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13618,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1696:37:54",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13619,
+                  "nodeType": "EmitStatement",
+                  "src": "1691:42:54"
+                }
+              ]
+            },
+            "id": 13621,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removeBlocklistAdmin",
+            "nameLocation": "1569:21:54",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13606,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13603,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1599:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13621,
+                  "src": "1591:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13602,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1591:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13605,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1614:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13621,
+                  "src": "1606:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13604,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1606:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1590:32:54"
+            },
+            "returnParameters": {
+              "id": 13607,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1632:0:54"
+            },
+            "scope": 13622,
+            "src": "1560:180:54",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 13623,
+        "src": "329:1413:54",
+        "usedErrors": []
+      }
+    ],
+    "src": "154:1588:54"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-10T15:08:02.393Z",
+  "devdoc": {
+    "details": "BlocklistAdmins are responsible for assigning and removing Blocklisted accounts.",
+    "kind": "dev",
+    "methods": {},
+    "title": "BlocklistAdminRole",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

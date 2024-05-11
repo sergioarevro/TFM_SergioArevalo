@@ -1,9 +1,10 @@
 pragma solidity ^0.8.0;
 
-import "./ERC1400.sol";
+//import "./ERC1400/ERC1400.sol";
 
-contract MyContract is ERC1400 {
-    ERC1400 private _token;
+//contract MyContract is ERC1400 {
+contract MyContract {
+    /**ERC1400 private _token;
 
     constructor(
         string memory tokenName,
@@ -22,5 +23,5 @@ contract MyContract is ERC1400 {
     {
         //transferTokens
         //transferTokens(0xFE3B557E8Fb62b89F4916B721be55cEb828dBd73, 100);
-    }
+    }*/
 }

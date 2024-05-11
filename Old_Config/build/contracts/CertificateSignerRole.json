@@ -1,0 +1,1855 @@
+{
+  "contractName": "CertificateSignerRole",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "CertificateSignerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "CertificateSignerRemoved",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isCertificateSigner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addCertificateSigner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeCertificateSigner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "renounceCertificateSigner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"CertificateSignerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"CertificateSignerRemoved\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addCertificateSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isCertificateSigner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeCertificateSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"renounceCertificateSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Certificate signers are responsible for signing certificates.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"CertificateSignerRole\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/roles/CertificateSignerRole.sol\":\"CertificateSignerRole\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"project:/contracts/roles/CertificateSignerRole.sol\":{\"keccak256\":\"0x2482c4cbf874264bf4548d1c45b0ad483aa4bdb18a1d0cda425fd1402159913f\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://261390ec54a6f5806c451b3d0a17b5998580481ec11dba7602be26ea728284d1\",\"dweb:/ipfs/QmW1jvX5jgmYHZGg6GdR5Cq7FWoqPy3tgw3b57ieGWsW5f\"]},\"project:/contracts/roles/Roles.sol\":{\"keccak256\":\"0x5a50db74c6506a1fa2bf12dc2a584e9131d27e011ca11f848c3eefcc87ccf9e3\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://ef0289f75d1b7b3f0dd7dd815ef7bff742f38e137605fbf3c4a3b5e3a6b44b6b\",\"dweb:/ipfs/QmTdoBbU4PhqcApxJmbJxVVVJLpBTMKofy9USEYjGnariR\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\n/*\n * This code has not been reviewed.\n * Do not use or deploy this code before reviewing it personally first.\n */\npragma solidity ^0.8.0;\n\nimport \"./Roles.sol\";\n\n\n/**\n * @title CertificateSignerRole\n * @dev Certificate signers are responsible for signing certificates.\n */\nabstract contract CertificateSignerRole {\n    using Roles for Roles.Role;\n\n    event CertificateSignerAdded(address indexed token, address indexed account);\n    event CertificateSignerRemoved(address indexed token, address indexed account);\n\n    // Mapping from token to token certificate signers.\n    mapping(address => Roles.Role) private _certificateSigners;\n\n    modifier onlyCertificateSigner(address token) virtual {\n        require(isCertificateSigner(token, msg.sender));\n        _;\n    }\n\n    function isCertificateSigner(address token, address account) public view returns (bool) {\n        return _certificateSigners[token].has(account);\n    }\n\n    function addCertificateSigner(address token, address account) public onlyCertificateSigner(token) {\n        _addCertificateSigner(token, account);\n    }\n\n    function removeCertificateSigner(address token, address account) public onlyCertificateSigner(token) {\n        _removeCertificateSigner(token, account);\n    }\n\n    function renounceCertificateSigner(address token) public {\n        _removeCertificateSigner(token, msg.sender);\n    }\n\n    function _addCertificateSigner(address token, address account) internal {\n        _certificateSigners[token].add(account);\n        emit CertificateSignerAdded(token, account);\n    }\n\n    function _removeCertificateSigner(address token, address account) internal {\n        _certificateSigners[token].remove(account);\n        emit CertificateSignerRemoved(token, account);\n    }\n}",
+  "sourcePath": "/Users/sergio/Desktop/TFM/project/contracts/roles/CertificateSignerRole.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/roles/CertificateSignerRole.sol",
+    "exportedSymbols": {
+      "CertificateSignerRole": [
+        13896
+      ],
+      "Roles": [
+        14244
+      ]
+    },
+    "id": 13897,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13757,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "154:23:56"
+      },
+      {
+        "absolutePath": "project:/contracts/roles/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 13758,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 13897,
+        "sourceUnit": 14245,
+        "src": "179:21:56",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 13759,
+          "nodeType": "StructuredDocumentation",
+          "src": "203:109:56",
+          "text": " @title CertificateSignerRole\n @dev Certificate signers are responsible for signing certificates."
+        },
+        "fullyImplemented": true,
+        "id": 13896,
+        "linearizedBaseContracts": [
+          13896
+        ],
+        "name": "CertificateSignerRole",
+        "nameLocation": "331:21:56",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 13763,
+            "libraryName": {
+              "id": 13760,
+              "name": "Roles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 14244,
+              "src": "365:5:56"
+            },
+            "nodeType": "UsingForDirective",
+            "src": "359:27:56",
+            "typeName": {
+              "id": 13762,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 13761,
+                "name": "Roles.Role",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 14163,
+                "src": "375:10:56"
+              },
+              "referencedDeclaration": 14163,
+              "src": "375:10:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Role_$14163_storage_ptr",
+                "typeString": "struct Roles.Role"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "id": 13769,
+            "name": "CertificateSignerAdded",
+            "nameLocation": "398:22:56",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13768,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13765,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "437:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13769,
+                  "src": "421:21:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13764,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "421:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13767,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "460:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13769,
+                  "src": "444:23:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13766,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "444:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "420:48:56"
+            },
+            "src": "392:77:56"
+          },
+          {
+            "anonymous": false,
+            "id": 13775,
+            "name": "CertificateSignerRemoved",
+            "nameLocation": "480:24:56",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13771,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "521:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13775,
+                  "src": "505:21:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13770,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "505:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13773,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "544:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13775,
+                  "src": "528:23:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13772,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "504:48:56"
+            },
+            "src": "474:79:56"
+          },
+          {
+            "constant": false,
+            "id": 13780,
+            "mutability": "mutable",
+            "name": "_certificateSigners",
+            "nameLocation": "654:19:56",
+            "nodeType": "VariableDeclaration",
+            "scope": 13896,
+            "src": "615:58:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+              "typeString": "mapping(address => struct Roles.Role)"
+            },
+            "typeName": {
+              "id": 13779,
+              "keyType": {
+                "id": 13776,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "623:7:56",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "615:30:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                "typeString": "mapping(address => struct Roles.Role)"
+              },
+              "valueType": {
+                "id": 13778,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 13777,
+                  "name": "Roles.Role",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 14163,
+                  "src": "634:10:56"
+                },
+                "referencedDeclaration": 14163,
+                "src": "634:10:56",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Role_$14163_storage_ptr",
+                  "typeString": "struct Roles.Role"
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 13793,
+              "nodeType": "Block",
+              "src": "734:75:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 13786,
+                            "name": "token",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 13782,
+                            "src": "772:5:56",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 13787,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 4294967281,
+                              "src": "779:3:56",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 13788,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "779:10:56",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 13785,
+                          "name": "isCertificateSigner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13811,
+                          "src": "752:19:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address,address) view returns (bool)"
+                          }
+                        },
+                        "id": 13789,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "752:38:56",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 13784,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "744:7:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 13790,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "744:47:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13791,
+                  "nodeType": "ExpressionStatement",
+                  "src": "744:47:56"
+                },
+                {
+                  "id": 13792,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "801:1:56"
+                }
+              ]
+            },
+            "id": 13794,
+            "name": "onlyCertificateSigner",
+            "nameLocation": "689:21:56",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 13783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13782,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "719:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13794,
+                  "src": "711:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13781,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "711:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:15:56"
+            },
+            "src": "680:129:56",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13810,
+              "nodeType": "Block",
+              "src": "903:63:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13807,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13798,
+                        "src": "951:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 13803,
+                          "name": "_certificateSigners",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13780,
+                          "src": "920:19:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                            "typeString": "mapping(address => struct Roles.Role storage ref)"
+                          }
+                        },
+                        "id": 13805,
+                        "indexExpression": {
+                          "id": 13804,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13796,
+                          "src": "940:5:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "920:26:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$14163_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 13806,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "has",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14243,
+                      "src": "920:30:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$14163_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$14163_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 13808,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "920:39:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 13802,
+                  "id": 13809,
+                  "nodeType": "Return",
+                  "src": "913:46:56"
+                }
+              ]
+            },
+            "functionSelector": "9e59ceba",
+            "id": 13811,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isCertificateSigner",
+            "nameLocation": "824:19:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13799,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13796,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "852:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13811,
+                  "src": "844:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13795,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "844:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13798,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "867:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13811,
+                  "src": "859:15:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13797,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "859:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "843:32:56"
+            },
+            "returnParameters": {
+              "id": 13802,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13801,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13811,
+                  "src": "897:4:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 13800,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "897:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "896:6:56"
+            },
+            "scope": 13896,
+            "src": "815:151:56",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13826,
+              "nodeType": "Block",
+              "src": "1070:54:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13822,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13813,
+                        "src": "1102:5:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13823,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13815,
+                        "src": "1109:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13821,
+                      "name": "_addCertificateSigner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13875,
+                      "src": "1080:21:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13824,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1080:37:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13825,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1080:37:56"
+                }
+              ]
+            },
+            "functionSelector": "c69664bb",
+            "id": 13827,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 13818,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 13813,
+                    "src": "1063:5:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 13819,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 13817,
+                  "name": "onlyCertificateSigner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 13794,
+                  "src": "1041:21:56"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1041:28:56"
+              }
+            ],
+            "name": "addCertificateSigner",
+            "nameLocation": "981:20:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13816,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13813,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1010:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13827,
+                  "src": "1002:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13812,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1002:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13815,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1025:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13827,
+                  "src": "1017:15:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13814,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1017:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1001:32:56"
+            },
+            "returnParameters": {
+              "id": 13820,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1070:0:56"
+            },
+            "scope": 13896,
+            "src": "972:152:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13842,
+              "nodeType": "Block",
+              "src": "1231:57:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13838,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13829,
+                        "src": "1266:5:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13839,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13831,
+                        "src": "1273:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13837,
+                      "name": "_removeCertificateSigner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13895,
+                      "src": "1241:24:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13840,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1241:40:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13841,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1241:40:56"
+                }
+              ]
+            },
+            "functionSelector": "e81ea541",
+            "id": 13843,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 13834,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 13829,
+                    "src": "1224:5:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 13835,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 13833,
+                  "name": "onlyCertificateSigner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 13794,
+                  "src": "1202:21:56"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1202:28:56"
+              }
+            ],
+            "name": "removeCertificateSigner",
+            "nameLocation": "1139:23:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13832,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13829,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1171:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13843,
+                  "src": "1163:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13828,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1163:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13831,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1186:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13843,
+                  "src": "1178:15:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13830,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1178:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1162:32:56"
+            },
+            "returnParameters": {
+              "id": 13836,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1231:0:56"
+            },
+            "scope": 13896,
+            "src": "1130:158:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13854,
+              "nodeType": "Block",
+              "src": "1351:60:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13849,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13845,
+                        "src": "1386:5:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 13850,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "1393:3:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 13851,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1393:10:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13848,
+                      "name": "_removeCertificateSigner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13895,
+                      "src": "1361:24:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13852,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1361:43:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13853,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1361:43:56"
+                }
+              ]
+            },
+            "functionSelector": "3bddaf8f",
+            "id": 13855,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "renounceCertificateSigner",
+            "nameLocation": "1303:25:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13846,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13845,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1337:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13855,
+                  "src": "1329:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13844,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1329:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1328:15:56"
+            },
+            "returnParameters": {
+              "id": 13847,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1351:0:56"
+            },
+            "scope": 13896,
+            "src": "1294:117:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13874,
+              "nodeType": "Block",
+              "src": "1489:109:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13866,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13859,
+                        "src": "1530:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 13862,
+                          "name": "_certificateSigners",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13780,
+                          "src": "1499:19:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                            "typeString": "mapping(address => struct Roles.Role storage ref)"
+                          }
+                        },
+                        "id": 13864,
+                        "indexExpression": {
+                          "id": 13863,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13857,
+                          "src": "1519:5:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1499:26:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$14163_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 13865,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14190,
+                      "src": "1499:30:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$14163_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$14163_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 13867,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1499:39:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13868,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1499:39:56"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 13870,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13857,
+                        "src": "1576:5:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13871,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13859,
+                        "src": "1583:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13869,
+                      "name": "CertificateSignerAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13769,
+                      "src": "1553:22:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13872,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1553:38:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13873,
+                  "nodeType": "EmitStatement",
+                  "src": "1548:43:56"
+                }
+              ]
+            },
+            "id": 13875,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_addCertificateSigner",
+            "nameLocation": "1426:21:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13860,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13857,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1456:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13875,
+                  "src": "1448:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13856,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1448:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13859,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1471:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13875,
+                  "src": "1463:15:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13858,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1463:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1447:32:56"
+            },
+            "returnParameters": {
+              "id": 13861,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1489:0:56"
+            },
+            "scope": 13896,
+            "src": "1417:181:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13894,
+              "nodeType": "Block",
+              "src": "1679:114:56",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 13886,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13879,
+                        "src": "1723:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 13882,
+                          "name": "_certificateSigners",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13780,
+                          "src": "1689:19:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Role_$14163_storage_$",
+                            "typeString": "mapping(address => struct Roles.Role storage ref)"
+                          }
+                        },
+                        "id": 13884,
+                        "indexExpression": {
+                          "id": 13883,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13877,
+                          "src": "1709:5:56",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1689:26:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$14163_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 13885,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14216,
+                      "src": "1689:33:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$14163_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$14163_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 13887,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1689:42:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13888,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1689:42:56"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 13890,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13877,
+                        "src": "1771:5:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 13891,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13879,
+                        "src": "1778:7:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13889,
+                      "name": "CertificateSignerRemoved",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13775,
+                      "src": "1746:24:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 13892,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1746:40:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13893,
+                  "nodeType": "EmitStatement",
+                  "src": "1741:45:56"
+                }
+              ]
+            },
+            "id": 13895,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removeCertificateSigner",
+            "nameLocation": "1613:24:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13880,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13877,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1646:5:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13895,
+                  "src": "1638:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13876,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1638:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13879,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1661:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13895,
+                  "src": "1653:15:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13878,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1653:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1637:32:56"
+            },
+            "returnParameters": {
+              "id": 13881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1679:0:56"
+            },
+            "scope": 13896,
+            "src": "1604:189:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 13897,
+        "src": "313:1482:56",
+        "usedErrors": []
+      }
+    ],
+    "src": "154:1641:56"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-10T15:08:02.398Z",
+  "devdoc": {
+    "details": "Certificate signers are responsible for signing certificates.",
+    "kind": "dev",
+    "methods": {},
+    "title": "CertificateSignerRole",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

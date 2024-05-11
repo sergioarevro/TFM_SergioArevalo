@@ -1,0 +1,29 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "OracleCallerInterface",
+  "sourceName": "contracts/oracle/OracleCallerInterface.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "data",
+          "type": "string"
+        }
+      ],
+      "name": "callback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

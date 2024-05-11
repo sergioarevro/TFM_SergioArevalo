@@ -1,0 +1,422 @@
+{
+  "contractName": "IMinterMock",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "renounceMinter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"renounceMinter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Interface to the Minterrole contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/mocks/ERC1400TokensValidatorMock.sol\":\"IMinterMock\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b2ebbbe6d0011175bd9e7268b83de3f9c2f9d8d4cbfbaef12aff977d7d727163\",\"dweb:/ipfs/Qmd5c7Vxtis9wzkDNhxwc6A2QT5H9xn9kfjhx7qx44vpro\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://087318b21c528119f649899f5b5580566dd8d7b0303d4904bd0e8580c3545f14\",\"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x95098bd1d9c8dec4d80d3dedb88a0d949fa0d740ee99f2aa466bc308216ca6d5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7fec968dcd68e13961521fa3c7dd87baecad91a2653b19240e81f21cc4f3ba85\",\"dweb:/ipfs/QmaXtsYt4Mphm8XHNUfk2me1cF3ssS2SqDBNFpYAzMjomC\"]},\"@openzeppelin/contracts/utils/introspection/IERC1820Registry.sol\":{\"keccak256\":\"0xdf30b8f2bba82b86661928377f70ba4b68739a799f8bad36e542144811aa70d6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://21bd0454780574067a356fb6e2f312c742c6f6cd0ce1ff38cf7152ff62d75896\",\"dweb:/ipfs/QmUmojQcsT1B6tsVicqpv9keAjvXjuj9pJcvQgQ8Kvuumq\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x8666f020bd8fc9dc14f07e2ebc52b5f236ab4cdde7c77679b08cb2f94730043b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://163776cbf565c722232393aa2d62cbe8a2ffb5805986abf4906c00e1e07450a6\",\"dweb:/ipfs/QmPZoN9T3cb6o8bGhjBPZcz7im8T8DWhpr3tjLwhJJHx9N\"]},\"project:/contracts/IERC1400.sol\":{\"keccak256\":\"0x068dca77537afdd3e7bfe1bdfa93db232c2d84b48b7c1a2b924fb68cf6479502\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://4a3819432a4fc0e7da7b461e98c86beab4b7b47058a02f6871cbd74ea366de3f\",\"dweb:/ipfs/QmXSpFeYECHKh7aQbXPa7BczPEhjERxS9Dfof1XXW2BNiK\"]},\"project:/contracts/extensions/tokenExtensions/ERC1400TokensValidator.sol\":{\"keccak256\":\"0xec4a9433ae59bc4935095640ca62061a34158f21e5bb0a5a8ff50dbf954f9fc7\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://b083f341a8413ccf765e9fab97d4f9e92ba6089e40b2b173d81c2518ab2a9c7c\",\"dweb:/ipfs/QmTRdUcz9BwAtheZNNnxRAQS2uQ4ngozUfJRxTevZKudAR\"]},\"project:/contracts/extensions/tokenExtensions/IERC1400TokensValidator.sol\":{\"keccak256\":\"0x7e9db62987cfdbe9861b2d806b69be904e3ca3276d7fa19ad1e5fbe42dce1358\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://5079c343c18ebe16aced48dac0da73c3f3a17b70500a4db3f9f4b933a593f43c\",\"dweb:/ipfs/QmTA54rzEcjZBVZ93xVnmeWXTYZvTHHoViHuXv29FTREdn\"]},\"project:/contracts/interface/ERC1820Implementer.sol\":{\"keccak256\":\"0x73a779c5921dd13ed066e7f552c70650a7dc180259c7ae3ca737412c44f456f4\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://6ef9b2cd1dc82ba9a8a0174f3eb319ad4272ba88ece590245b1b226587c6c640\",\"dweb:/ipfs/QmVQ154bNWE8ZVtC9HFYEntAgxGj5KNamUSXmCGWjacebx\"]},\"project:/contracts/interface/HoldStatusCode.sol\":{\"keccak256\":\"0x6deb0acca580b9e9474d8dc953a759311c1f77876fa06cf672550970db0289a6\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://603ba40c099b8affdd7a25a2922b7a13fe30a52d0922cc10d669723dac80de05\",\"dweb:/ipfs/QmWE3hHWtcJqaL1g2rU3ztTxwJMUJnMQS5ZdA2QvChpRo6\"]},\"project:/contracts/interface/IERC1643.sol\":{\"keccak256\":\"0xf742bf58825da4284363ab3571edb627777df9a6a20856b9cc8bbbf31205d1d8\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://041f2b44632942ea03c0a8667d9f7db9dc7be058d7e31eb83f69501f7f1ee2b9\",\"dweb:/ipfs/Qmbik5bq1RKkGaqFcJ1aiL4pPjwgxPfRuH9D8tKNkqmyvJ\"]},\"project:/contracts/interface/IHoldableERC1400TokenExtension.sol\":{\"keccak256\":\"0xc37ba418eac8f7eff956bc790514cd1cc04d2fedf5f69dcb91274ffcfca41b09\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://85c956f11c5748242815ebdfa315758d242641d97a34a9ddfdceed43cb0f8fac\",\"dweb:/ipfs/QmeCGZUzmrb3D4RNStwgrHRNAsVLy9kXppLdpq6fAkkGXN\"]},\"project:/contracts/mocks/ERC1400TokensValidatorMock.sol\":{\"keccak256\":\"0x2a419934e1f7fd90b8286f37d4b4dbc601e250ce9f168e6292f9df5fdfca1d7b\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://10ae660171146801087cf3f925ae58f9e45cbf787b4fb07e9b94a851e05b4256\",\"dweb:/ipfs/QmTxtWSyZKw9iNfApUsRm5phmLhoRceq94ugM9pLdi8pR4\"]},\"project:/contracts/roles/AllowlistAdminRole.sol\":{\"keccak256\":\"0xa4dd61210e0dd7cdce061d0e02ee91c1c6ac807907d9b04f82163cc1ad15fe6c\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://db7f962fe5ac6480a8eff87c8ccdaa59fcea09ae6665e0f85f6e0e015fae6b69\",\"dweb:/ipfs/QmZMPDhXuxDXcba3RV6LkToZ367SBduDrWV5yxihYRKQdq\"]},\"project:/contracts/roles/AllowlistedRole.sol\":{\"keccak256\":\"0x5d2fb1f22b46841e33ff57a545b5302863d34f93b21fa7eb7112e5ff3f81ecf1\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://f8c226ac393906be57b3b0d7c6d18474d0b5627dc5788814e4334cb9a4234895\",\"dweb:/ipfs/QmSNJHret9EZLr9bkVxLB5iktanczK77UMHKzQJRUQqbPM\"]},\"project:/contracts/roles/BlocklistAdminRole.sol\":{\"keccak256\":\"0x24a8b578fbcd3f7d24db2c7aaa91cd0112dff5f8c51cf0079cc026354ed74f84\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://a01920f37e14015229e61c326c81a4a84f92933b56b2b5b460d568aa96ae9354\",\"dweb:/ipfs/QmdFpQhsgaKy279ibXre46zPs5zSZrdHBHWgFSLbJWjHuE\"]},\"project:/contracts/roles/BlocklistedRole.sol\":{\"keccak256\":\"0xd75a7f12ffb3a048d31d884dd6c3a091c772742e14f257a4d86386270db46921\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://e891033c8facd1deb61d03931336029dc9f71e9cd6acaee34f7de533e956b6b3\",\"dweb:/ipfs/QmcTJdGhuid2oEiVJkrWmnWSV1MVGuDyjkfjwtci9HQDMC\"]},\"project:/contracts/roles/CertificateSignerRole.sol\":{\"keccak256\":\"0x2482c4cbf874264bf4548d1c45b0ad483aa4bdb18a1d0cda425fd1402159913f\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://261390ec54a6f5806c451b3d0a17b5998580481ec11dba7602be26ea728284d1\",\"dweb:/ipfs/QmW1jvX5jgmYHZGg6GdR5Cq7FWoqPy3tgw3b57ieGWsW5f\"]},\"project:/contracts/roles/PauserRole.sol\":{\"keccak256\":\"0xc59f00dcb4330104878c266e1b4303385b3949721fc0f5ea60cb6887825bfca7\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://57b386399af357403d2db53326b95ab91c77148b2d330af1faafef0c6c2760f2\",\"dweb:/ipfs/QmZ9hLrtJZtcKewev2meFHctGrYukYYQ7vbyyXecjW5QX9\"]},\"project:/contracts/roles/Roles.sol\":{\"keccak256\":\"0x5a50db74c6506a1fa2bf12dc2a584e9131d27e011ca11f848c3eefcc87ccf9e3\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://ef0289f75d1b7b3f0dd7dd815ef7bff742f38e137605fbf3c4a3b5e3a6b44b6b\",\"dweb:/ipfs/QmTdoBbU4PhqcApxJmbJxVVVJLpBTMKofy9USEYjGnariR\"]},\"project:/contracts/tools/DomainAware.sol\":{\"keccak256\":\"0xf4356ff0da0cf05198c15b789cef584646805173e22b279d7d0017d653df596c\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://2d57388ed1d3ac13d3568f5fdbd24e23fbab91b36aea0c5b0d23d651647026b0\",\"dweb:/ipfs/QmWRGkhmF5R6Xig2HYtUcJ27wWHF4iCQyR9ZSoiDgJS5PP\"]},\"project:/contracts/tools/ERC1820Client.sol\":{\"keccak256\":\"0x00a2c91c981963733d6a6d56db442e1c763b0312aea8a8ea3129ee9d3f59ba5b\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://6479dc6c115e17cda4ccad06007c8c7684fc2ba85dd599c61169df5c25c8c759\",\"dweb:/ipfs/QmWtQNzvP3yst9H2mYBEmno99KBX3JAW2ppy6JtPoFc9cp\"]},\"project:/contracts/tools/Pausable.sol\":{\"keccak256\":\"0x4ddf6bf023d4807dc58744014dceb9a62c10ab5665beaae0282825e805b685f3\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://2f0f0e663867d9e9b61541a6a4171e6630c1373bd1ac92b5dd57957961ce09ae\",\"dweb:/ipfs/QmSufFZoMSEoEgC1hR1tgPFa4axa3VMeHnsDFzBnLzd4S1\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\nimport \"../extensions/tokenExtensions/ERC1400TokensValidator.sol\";\n\n/**\n @notice Interface to the Minterrole contract\n*/\ninterface IMinterMock {\n  function renounceMinter() external;\n}\n\ncontract ERC1400TokensValidatorMock is ERC1400TokensValidator {\n\n  function renounceMinter(address token) external onlyTokenController(token) {\n    IMinterMock(token).renounceMinter();\n  }\n\n}",
+  "sourcePath": "/Users/sergio/Desktop/TFM/project/contracts/mocks/ERC1400TokensValidatorMock.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/mocks/ERC1400TokensValidatorMock.sol",
+    "exportedSymbols": {
+      "AllowlistAdminRole": [
+        13348
+      ],
+      "AllowlistedRole": [
+        13481
+      ],
+      "BlocklistAdminRole": [
+        13622
+      ],
+      "BlocklistedRole": [
+        13755
+      ],
+      "CertificateSignerRole": [
+        13896
+      ],
+      "Context": [
+        3361
+      ],
+      "DomainAware": [
+        18438
+      ],
+      "ERC1400TokensValidator": [
+        12132
+      ],
+      "ERC1400TokensValidatorMock": [
+        12952
+      ],
+      "ERC1820Client": [
+        18518
+      ],
+      "ERC1820Implementer": [
+        12351
+      ],
+      "HoldStatusCode": [
+        12361
+      ],
+      "IERC1400": [
+        7982
+      ],
+      "IERC1400TokensValidator": [
+        12211
+      ],
+      "IERC1643": [
+        12412
+      ],
+      "IERC1820Registry": [
+        3690
+      ],
+      "IERC20": [
+        1377
+      ],
+      "IHoldableERC1400TokenExtension": [
+        12589
+      ],
+      "IMinterMock": [
+        12934
+      ],
+      "IMinterRole": [
+        8706
+      ],
+      "Ownable": [
+        661
+      ],
+      "Pausable": [
+        21759
+      ],
+      "PauserRole": [
+        14155
+      ],
+      "Roles": [
+        14244
+      ],
+      "SafeMath": [
+        4002
+      ]
+    },
+    "id": 12953,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12928,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:48"
+      },
+      {
+        "absolutePath": "project:/contracts/extensions/tokenExtensions/ERC1400TokensValidator.sol",
+        "file": "../extensions/tokenExtensions/ERC1400TokensValidator.sol",
+        "id": 12929,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 12953,
+        "sourceUnit": 12133,
+        "src": "64:66:48",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 12930,
+          "nodeType": "StructuredDocumentation",
+          "src": "132:52:48",
+          "text": "@notice Interface to the Minterrole contract"
+        },
+        "fullyImplemented": false,
+        "id": 12934,
+        "linearizedBaseContracts": [
+          12934
+        ],
+        "name": "IMinterMock",
+        "nameLocation": "195:11:48",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "98650275",
+            "id": 12933,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "renounceMinter",
+            "nameLocation": "220:14:48",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12931,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "234:2:48"
+            },
+            "returnParameters": {
+              "id": 12932,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "245:0:48"
+            },
+            "scope": 12934,
+            "src": "211:35:48",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12953,
+        "src": "185:63:48",
+        "usedErrors": []
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 12935,
+              "name": "ERC1400TokensValidator",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 12132,
+              "src": "289:22:48"
+            },
+            "id": 12936,
+            "nodeType": "InheritanceSpecifier",
+            "src": "289:22:48"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 12952,
+        "linearizedBaseContracts": [
+          12952,
+          12132,
+          12589,
+          12351,
+          18518,
+          13755,
+          13622,
+          13481,
+          13348,
+          13896,
+          21759,
+          14155,
+          12211
+        ],
+        "name": "ERC1400TokensValidatorMock",
+        "nameLocation": "259:26:48",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 12950,
+              "nodeType": "Block",
+              "src": "392:46:48",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 12945,
+                            "name": "token",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12938,
+                            "src": "410:5:48",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 12944,
+                          "name": "IMinterMock",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 12934,
+                          "src": "398:11:48",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IMinterMock_$12934_$",
+                            "typeString": "type(contract IMinterMock)"
+                          }
+                        },
+                        "id": 12946,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "398:18:48",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IMinterMock_$12934",
+                          "typeString": "contract IMinterMock"
+                        }
+                      },
+                      "id": 12947,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "renounceMinter",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 12933,
+                      "src": "398:33:48",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 12948,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "398:35:48",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 12949,
+                  "nodeType": "ExpressionStatement",
+                  "src": "398:35:48"
+                }
+              ]
+            },
+            "functionSelector": "5f112c68",
+            "id": 12951,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 12941,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 12938,
+                    "src": "385:5:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 12942,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 12940,
+                  "name": "onlyTokenController",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8958,
+                  "src": "365:19:48"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "365:26:48"
+              }
+            ],
+            "name": "renounceMinter",
+            "nameLocation": "326:14:48",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12939,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12938,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "349:5:48",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12951,
+                  "src": "341:13:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12937,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "341:7:48",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "340:15:48"
+            },
+            "returnParameters": {
+              "id": 12943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "392:0:48"
+            },
+            "scope": 12952,
+            "src": "317:121:48",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12953,
+        "src": "250:191:48",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:402:48"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-10T15:08:02.350Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "Interface to the Minterrole contract",
+    "version": 1
+  }
+}
