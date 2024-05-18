@@ -17,10 +17,8 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   // Deploy DataOracle
-  //const DataOracle = await hre.ethers.getContractFactory("DataOracle");
   const DataOracle = await hre.ethers.getContractFactory("DataOracle");
   const dataOracle = await DataOracle.deploy();
-  console.log("yesss");
   await dataOracle.deployed();
   console.log("DataOracle deployed to:", dataOracle.address);
 
@@ -34,7 +32,7 @@ async function main() {
   const setInstanceTx = await oracleCaller.setOracleInstanceAddress(dataOracle.address);
   await setInstanceTx.wait();
   const oracleInstanceAddress = await oracleCaller.getOracleInstanceAddress();
-  console.log('OracleCaller oracle instance addr:', oracleInstanceAddress());
+  console.log('OracleCaller oracle instance addr:', oracleInstanceAddress);
 }
 
 main()

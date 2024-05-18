@@ -3,7 +3,7 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-// const hre = require("hardhat");
+const hre = require("hardhat");
 const { ethers } = require("ethers");
 const axios = require('axios');
 
@@ -12,12 +12,8 @@ const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/OracleCall
 const DataOracleJSON = require(__dirname + '/../artifacts/contracts/oracle/DataOracle.sol/DataOracle.json');
 const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json'); 
 
-// TODO: do not hardcode these!
-/**const dataOracleAddress = '0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6';
-const oracleCallerAddress = '0x8A791620dd6260079BF849Dc5567aDC3F2FdC318';*/
-
-const dataOracleAddress = '0xDE87AF9156a223404885002669D3bE239313Ae33';
-const oracleCallerAddress = '0x686AfD6e502A81D2e77f2e038A23C0dEf4949A20';
+const dataOracleAddress = '0x5EB5888938e3fE7b334b1838B19C1e828c5148aA';
+const oracleCallerAddress = '0x4261D524bc701dA4AC49339e5F8b299977045eA5';
 
 const MAX_RETRIES = 1;
 const PROCESS_CHUNK = 3;
@@ -73,9 +69,10 @@ async function processRequestQueue(dataOracle) {
 (async () => {
   // We first initialize ethers by creating a provider using our local node
   const provider = new ethers.providers.JsonRpcProvider();
+  const wallet = new ethers.Wallet("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63");
+  //connect the wallet to the provider
+  const signer = wallet.connect(provider);
 
-  const signer = provider.getSigner();
-  //const signer = provider.getSigner('0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199');
   console.log('Signer address:', await signer.getAddress());
 
   // Initialize contracts
