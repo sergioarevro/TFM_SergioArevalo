@@ -1,6 +1,7 @@
 const hre = require("hardhat");
 const { ethers } = require("ethers");
 const MyContractJSON = require(__dirname + '/../artifacts/contracts/MyContract.sol/MyContract.json');
+const TFMTokenJSON = require(__dirname + '/../artifacts/contracts/TFMToken.sol/TFMToken.json');
   
 async function deployContract() {
     //TODO: (modificar el nombre del contrato) Deploy MyContract.sol
@@ -10,15 +11,6 @@ async function deployContract() {
     const myContract = await MyContract.deploy();
     await myContract.deployed();
     console.log("MyContract deployed to: ", myContract.address);
-
-    /*const oracleCaller = new ethers.Contract(
-      oracleCallerAddress,
-      OracleCallerJSON.abi,
-      signer
-    );
-
-    const tx = await oracleCaller.updateData();
-    await tx.wait();*/
 
     const myContractCaller = new ethers.Contract(
         myContract.address,
@@ -33,6 +25,14 @@ async function deployContract() {
     console.log("The oracle data is: ", responseTest);
 }
 
+async function deployToken(){
+  const initialSupply = 1000;
+  const TFMToken = await hre.ethers.getContractFactory("TFMToken");
+  const tfmToken = await TFMToken.deploy(initialSupply);
+  await tfmToken.deployed();
+  console.log("TFMToken deployed to: ", tfmToken.address);
+}
+
 const provider = new ethers.providers.JsonRpcProvider();
 const wallet = new ethers.Wallet("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63");
 //connect the wallet to the provider
@@ -43,3 +43,4 @@ const deployer = signer;
 console.log("Deploying contracts with the account:", deployer.address);
 
 deployContract();
+deployToken();

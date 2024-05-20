@@ -1,14 +1,7 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// When running the script with `npx hardhat run <script>` you'll find the Hardhat
-// Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const { ethers } = require("ethers");
 const axios = require('axios');
 
-/**const DataOracleJSON = require(__dirname + '/../artifacts/contracts/DataOracle.sol/DataOracle.json');
-const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/OracleCaller.sol/OracleCaller.json');*/
 const DataOracleJSON = require(__dirname + '/../artifacts/contracts/oracle/DataOracle.sol/DataOracle.json');
 const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json'); 
 
@@ -21,10 +14,14 @@ const PROCESS_CHUNK = 3;
 let pendingRequestQueue = []
 
 async function fetchData() {
-  // Get random shibe pict! 🐕
-  // NOTE: change this to your desired API
-  const response = await axios.get('http://shibe.online/api/shibes');
-  return response.data[0];
+  const url ='https://raw.githubusercontent.com/sergioarevro/project/main/info.json?token=GHSAT0AAAAAACQE2QSS2O4TGCXCUEGIK5CIZSLN2KA';
+  const response = await axios.get(url);
+  const data = response.data;
+  console.log('1- ',data);
+  console.log('2- ', data.usuarios[0]);
+  console.log('Nombre del primer usuario:', data.usuarios[0].nombre);
+  console.log('Horas de correr del primer usuario:', data.usuarios[0].deportes.correr);
+  return response.data;
 }
 
 async function setLatestData(dataOracle, id, data) {
@@ -67,10 +64,8 @@ async function processRequestQueue(dataOracle) {
 }
 
 (async () => {
-  // We first initialize ethers by creating a provider using our local node
   const provider = new ethers.providers.JsonRpcProvider();
   const wallet = new ethers.Wallet("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63");
-  //connect the wallet to the provider
   const signer = wallet.connect(provider);
 
   console.log('Signer address:', await signer.getAddress());
