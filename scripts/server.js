@@ -12,8 +12,8 @@ const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/OracleCall
 const DataOracleJSON = require(__dirname + '/../artifacts/contracts/oracle/DataOracle.sol/DataOracle.json');
 const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json'); 
 
-const dataOracleAddress = '0x5EB5888938e3fE7b334b1838B19C1e828c5148aA';
-const oracleCallerAddress = '0x4261D524bc701dA4AC49339e5F8b299977045eA5';
+const dataOracleAddress = '0x42699A7612A82f1d9C36148af9C77354759b210b';
+const oracleCallerAddress = '0xa50a51c09a5c451C52BB714527E1974b686D8e77';
 
 const MAX_RETRIES = 1;
 const PROCESS_CHUNK = 3;

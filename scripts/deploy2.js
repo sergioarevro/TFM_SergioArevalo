@@ -5,11 +5,20 @@ const MyContractJSON = require(__dirname + '/../artifacts/contracts/MyContract.s
 async function deployContract() {
     //TODO: (modificar el nombre del contrato) Deploy MyContract.sol
     const MyContract = await hre.ethers.getContractFactory("MyContract");
-    const dataOracleAddress = '0x5EB5888938e3fE7b334b1838B19C1e828c5148aA';
-    const oracleCallerAddress = '0x4261D524bc701dA4AC49339e5F8b299977045eA5';
+    const dataOracleAddress = '0x42699A7612A82f1d9C36148af9C77354759b210b';
+    const oracleCallerAddress = '0xa50a51c09a5c451C52BB714527E1974b686D8e77';
     const myContract = await MyContract.deploy();
     await myContract.deployed();
     console.log("MyContract deployed to: ", myContract.address);
+
+    /*const oracleCaller = new ethers.Contract(
+      oracleCallerAddress,
+      OracleCallerJSON.abi,
+      signer
+    );
+
+    const tx = await oracleCaller.updateData();
+    await tx.wait();*/
 
     const myContractCaller = new ethers.Contract(
         myContract.address,

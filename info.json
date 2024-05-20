@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Usuario1",
+      "deportes": {
+        "correr": "1h",
+        "nadar": "2h"
+      }
+    },
+    {
+      "nombre": "Usuario2",
+      "deportes": {
+        "correr": "1.5h",
+        "nadar": "1h"
+      }
+    },
+    {
+      "nombre": "Usuario3",
+      "deportes": {
+        "correr": "2h",
+        "nadar": "3h"
+      }
+    }
+  ]
+}

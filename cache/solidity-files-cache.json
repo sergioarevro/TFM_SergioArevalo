@@ -39,8 +39,8 @@
       ]
     },
     "/Users/sergio/Desktop/TFM/project/contracts/oracle/DataOracle.sol": {
-      "lastModificationDate": 1715440162125,
-      "contentHash": "d9f00de56b02f4f21abcd7e80b2027cc",
+      "lastModificationDate": 1716110770413,
+      "contentHash": "92b8f36901dc4fff5970912b046e9b01",
       "sourceName": "contracts/oracle/DataOracle.sol",
       "solcConfig": {
         "version": "0.8.4",
