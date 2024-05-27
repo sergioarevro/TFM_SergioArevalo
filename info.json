@@ -10,7 +10,7 @@
     "baloncesto": 2,
     "yoga": 1
   },
-  "usuarios": [
+  "empleados": [
     {
       "nombre": "Empleado1",
       "deportes": {

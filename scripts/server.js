@@ -15,18 +15,10 @@ const PROCESS_CHUNK = 3;
 
 let pendingRequestQueue = []
 
-//TODO recuperar todo el JSON y enviarlo a processRequest del mismo modo que ahora, a la variable data.
 async function fetchData() {
-  //TODO aqui llamar a 
-  const url ='https://raw.githubusercontent.com/sergioarevro/project/main/info.json?token=GHSAT0AAAAAACQE2QSS2O4TGCXCUEGIK5CIZSLN2KA';
+  const url = 'https://raw.githubusercontent.com/sergioarevro/project/main/info.json';
   const response = await axios.get(url);
   const data = response.data;
-  //const data = '0x1234';
-  //console.log('1- ',data);
-  //console.log('2- ', data.usuarios[0]);
-  //console.log('Nombre del primer usuario:', data.usuarios[0].nombre);
-  //console.log('Horas de correr del primer usuario:', data.usuarios[0].deportes.correr);
-  //return response.data;
   return data;
 }
 
@@ -52,9 +44,28 @@ async function processRequest(dataOracle, id) {
   while (retries < MAX_RETRIES) {
     try {
       const data = await fetchData()
-      //Aquí llega la info del fetchData
-      console.log('1-', data);
-      await setLatestData(dataOracle, id, data);
+      
+      //Gestión de la logica para transferencias
+      const tokensPerMin = data['deporte-tokens'];
+      const employees = data.empleados;
+
+      employees.forEach(employee => {
+        const name = employee.nombre;
+        const sports = employee.deportes;
+        let totalTokens = 0;
+    
+        for (const sport in sports) {
+          const exerciceTime = sports[sport];
+          const tokensPerSport = tokensPerMin[sport] || 0;
+          const tokensEarned = exerciceTime * tokensPerSport;
+          totalTokens += tokensEarned;
+          console.log(`${name} ha hecho ${exerciceTime} minutos de ${sport}, lo que equivale a ${tokensEarned} tokens.`);
+        }
+    
+        console.log(`Total de tokens para ${name}: ${totalTokens}`);
+      });
+
+      //await setLatestData(dataOracle, id, tokens, employeeAddress);
       return;
     } catch (error) {
       if (retries === MAX_RETRIES - 1) {
