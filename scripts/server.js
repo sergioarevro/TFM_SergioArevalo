@@ -49,21 +49,23 @@ async function processRequest(dataOracle, id) {
       const tokensPerMin = data['deporte-tokens'];
       const employees = data.empleados;
 
-      employees.forEach(employee => {
+      for (const employee of employees) {
         const name = employee.nombre;
         const sports = employee.deportes;
+        const employeeAddress = employee.cuenta;
         let totalTokens = 0;
     
         for (const sport in sports) {
-          const exerciceTime = sports[sport];
+          const exerciseTime = sports[sport];
           const tokensPerSport = tokensPerMin[sport] || 0;
-          const tokensEarned = exerciceTime * tokensPerSport;
+          const tokensEarned = exerciseTime * tokensPerSport;
           totalTokens += tokensEarned;
-          console.log(`${name} ha hecho ${exerciceTime} minutos de ${sport}, lo que equivale a ${tokensEarned} tokens.`);
+          console.log(`${name} ha hecho ${exerciseTime} minutos de ${sport}, lo que equivale a ${tokensEarned} tokens.`);
         }
     
         console.log(`Total de tokens para ${name}: ${totalTokens}`);
-      });
+        await setLatestData(dataOracle, id, totalTokens, employeeAddress);
+      }
 
       //await setLatestData(dataOracle, id, tokens, employeeAddress);
       return;

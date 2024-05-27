@@ -13,6 +13,7 @@
   "empleados": [
     {
       "nombre": "Empleado1",
+      "cuenta": "627306090abaB3A6e1400e9345bC60c78a8BEf57",
       "deportes": {
         "correr": 0,
         "nadar": 35,
@@ -21,6 +22,7 @@
     },
     {
       "nombre": "Empleado2",
+      "cuenta": "f17f52151EbEF6C7334FAD080c5704D77216b732",
       "deportes": {
         "correr": 70,
         "nadar": 20,
@@ -29,6 +31,7 @@
     },
     {
       "nombre": "Empleado3",
+      "cuenta": "F0e244Cfa3E36F45f84130c44958Ae56D7bEd841",
       "deportes": {
         "correr": 15,
         "nadar": 25,
