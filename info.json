@@ -1,24 +1,38 @@
 {
+  "deporte-tokens": {
+    "_comment": "Relación de tokens por cada minuto de ejercicio.",
+    "caminar": 1,
+    "correr": 3,
+    "nadar": 3,
+    "pesas": 4,
+    "padel": 2,
+    "futbol": 2,
+    "baloncesto": 2,
+    "yoga": 1
+  },
   "usuarios": [
     {
-      "nombre": "Usuario1",
+      "nombre": "Empleado1",
       "deportes": {
-        "correr": "1h",
-        "nadar": "2h"
+        "correr": 0,
+        "nadar": 35,
+        "futbol": 90
       }
     },
     {
-      "nombre": "Usuario2",
+      "nombre": "Empleado2",
       "deportes": {
-        "correr": "1.5h",
-        "nadar": "1h"
+        "correr": 70,
+        "nadar": 20,
+        "baloncesto": 45
       }
     },
     {
-      "nombre": "Usuario3",
+      "nombre": "Empleado3",
       "deportes": {
-        "correr": "2h",
-        "nadar": "3h"
+        "correr": 15,
+        "nadar": 25,
+        "yoga": 120
       }
     }
   ]

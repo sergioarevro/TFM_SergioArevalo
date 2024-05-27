@@ -2,31 +2,40 @@ const hre = require("hardhat");
 const { ethers } = require("ethers");
 const axios = require('axios');
 
+const jsonreader = require('./jsonreader')
+
 const DataOracleJSON = require(__dirname + '/../artifacts/contracts/oracle/DataOracle.sol/DataOracle.json');
 const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json'); 
 
-const dataOracleAddress = '0x42699A7612A82f1d9C36148af9C77354759b210b';
-const oracleCallerAddress = '0xa50a51c09a5c451C52BB714527E1974b686D8e77';
+const dataOracleAddress = '0xfeae27388A65eE984F452f86efFEd42AaBD438FD';
+const oracleCallerAddress = '0xe135783649BfA7c9c4c6F8E528C7f56166efC8a6';
 
 const MAX_RETRIES = 1;
 const PROCESS_CHUNK = 3;
 
 let pendingRequestQueue = []
 
+//TODO recuperar todo el JSON y enviarlo a processRequest del mismo modo que ahora, a la variable data.
 async function fetchData() {
+  //TODO aqui llamar a 
   const url ='https://raw.githubusercontent.com/sergioarevro/project/main/info.json?token=GHSAT0AAAAAACQE2QSS2O4TGCXCUEGIK5CIZSLN2KA';
   const response = await axios.get(url);
   const data = response.data;
-  console.log('1- ',data);
-  console.log('2- ', data.usuarios[0]);
-  console.log('Nombre del primer usuario:', data.usuarios[0].nombre);
-  console.log('Horas de correr del primer usuario:', data.usuarios[0].deportes.correr);
-  return response.data;
+  //const data = '0x1234';
+  //console.log('1- ',data);
+  //console.log('2- ', data.usuarios[0]);
+  //console.log('Nombre del primer usuario:', data.usuarios[0].nombre);
+  //console.log('Horas de correr del primer usuario:', data.usuarios[0].deportes.correr);
+  //return response.data;
+  return data;
 }
 
-async function setLatestData(dataOracle, id, data) {
+//Modificado
+//async function setLatestData(dataOracle, id, data) {
+  async function setLatestData(dataOracle, id, tokens, employeeAddress){
   try {
-    const tx = await dataOracle.setLatestData(data, oracleCallerAddress, id);
+    //const tx = await dataOracle.setLatestData(data, oracleCallerAddress, id);
+    const tx = await dataOracle.setLatestData(tokens, employeeAddress, oracleCallerAddress, id);
     await tx.wait();
   } catch (error) {
     console.log('Error encountered while calling setLatestData');
@@ -34,11 +43,17 @@ async function setLatestData(dataOracle, id, data) {
   }
 }
 
+/**TODO la variable data tendrá todo el JSON, pasarselo a un nuevo js que trate todo el json y envíe de 1 en un 1 al setLatestData algo parecido
+a 100 tokens a la dirección 0x4532452346234. Hay que seguir modificando el setLatestData del dataOracle para que envíe los datos como queremos.
+Después modificar el callback del OracleCaller para que llame al ERC20 y haga la transfer
+**/
 async function processRequest(dataOracle, id) {
   let retries = 0
   while (retries < MAX_RETRIES) {
     try {
       const data = await fetchData()
+      //Aquí llega la info del fetchData
+      console.log('1-', data);
       await setLatestData(dataOracle, id, data);
       return;
     } catch (error) {

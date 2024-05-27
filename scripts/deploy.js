@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 const { ethers } = require("ethers");
 
-const TFMTokenJSON = require(__dirname + '/../artifacts/contracts/TFMToken.sol/TFMToken.json');
+const HealthyTokenJSON = require(__dirname + '/../artifacts/contracts/HealthyToken.sol/HealthyToken.json');
 
 async function main() {
   // Wallet provider
@@ -12,6 +12,23 @@ async function main() {
   // Deployer info
   const deployer = signer;
   console.log("Deploying contracts with the account:", deployer.address);
+
+  // Deploy HealthyToken.sol
+  const initialSupply = 1000;
+  const HealthyToken = await hre.ethers.getContractFactory("HealthyToken");
+  const healthyToken = await HealthyToken.deploy(initialSupply);
+  await healthyToken.deployed();
+  console.log("HealthyToken deployed to: ", healthyToken.address);
+
+  // Getting initial balance of deployer
+  const healthyTokenCaller = new ethers.Contract(
+    healthyToken.address,
+    HealthyTokenJSON.abi,
+    signer
+  );
+  
+    const balance = await healthyTokenCaller.balanceOf(deployer.address);
+    console.log("The initial supply of deployer account is: ",balance.toString());
 
   // Deploy DataOracle
   const DataOracle = await hre.ethers.getContractFactory("DataOracle");
@@ -31,29 +48,17 @@ async function main() {
   const oracleInstanceAddress = await oracleCaller.getOracleInstanceAddress();
   console.log('OracleCaller oracle instance addr:', oracleInstanceAddress);
 
+  //Set HealthyToken instance on OracleCaller
+  const setTokenTx = await oracleCaller.setHealthyTokenInstanceAddress(healthyToken.address);
+  await setTokenTx.wait();
+  const tokenInstanceAddress = await oracleCaller.getHealthyTokenInstanceAddress();
+  console.log('Token oracle instance addr:', tokenInstanceAddress);
+
   // Deploy MyContract.sol
-  const MyContract = await hre.ethers.getContractFactory("MyContract");
+  /*const MyContract = await hre.ethers.getContractFactory("MyContract");
   const myContract = await MyContract.deploy();
   await myContract.deployed();
-  console.log("MyContract deployed to: ", myContract.address);
-
-  // Deploy TFMToken.sol
-  const initialSupply = 1000;
-  const TFMToken = await hre.ethers.getContractFactory("TFMToken");
-  const tfmToken = await TFMToken.deploy(initialSupply);
-  await tfmToken.deployed();
-  console.log("TFMToken deployed to: ", tfmToken.address);
-
-  // Getting initial balance of deployer
-  const tokenCaller = new ethers.Contract(
-    tfmToken.address,
-    TFMTokenJSON.abi,
-    signer
-  );
-
-  const balance = await tokenCaller.balanceOf(deployer.address);
-  console.log("The initial supply of deployer account is: ",balance.toString());
-
+  console.log("MyContract deployed to: ", myContract.address);*/
 }
 
 main()

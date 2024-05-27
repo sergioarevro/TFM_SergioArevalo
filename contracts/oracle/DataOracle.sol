@@ -13,7 +13,8 @@ contract DataOracle is DataOracleInterface, Ownable {
     mapping(uint256 => bool) pendingRequests;
 
     event GetLatestDataEvent(address callerAddress, uint id);
-    event SetLatestDataEvent(string data, address callerAddress);
+    //event SetLatestDataEvent(string data, address callerAddress);
+    event SetLatestDataEvent(uint256 tokens, address employeeAddress);
 
     function getLatestData() external override returns (uint256) {
         randNonce++;
@@ -25,7 +26,8 @@ contract DataOracle is DataOracleInterface, Ownable {
         return id;
     }
 
-    function setLatestData(
+    //TODO modificar la info que le llega para que sea del tipo 100 tokens a la dirección 0x1242342...
+    /*function setLatestData(
         string memory _data,
         address _callerAddress,
         uint256 _id
@@ -39,5 +41,22 @@ contract DataOracle is DataOracleInterface, Ownable {
         callerContractInstance = OracleCallerInterface(_callerAddress);
         callerContractInstance.callback(_id, _data);
         emit SetLatestDataEvent(_data, _callerAddress);
+    }*/
+
+    function setLatestData(
+        uint256 _tokens,
+        address _employeeAddress,
+        address _callerAddress,
+        uint256 _id
+    ) public onlyOwner {
+        require(
+            pendingRequests[_id],
+            "This request is not in my pending list."
+        );
+        delete pendingRequests[_id];
+        OracleCallerInterface callerContractInstance;
+        callerContractInstance = OracleCallerInterface(_callerAddress);
+        callerContractInstance.callback(_id, _tokens, _employeeAddress);
+        emit SetLatestDataEvent(_tokens, _employeeAddress);
     }
 }

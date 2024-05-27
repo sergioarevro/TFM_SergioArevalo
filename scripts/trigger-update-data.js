@@ -3,7 +3,7 @@ const { ethers } = require("ethers");
 const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json');
 
 // TODO: do not hardcode these!
-const oracleCallerAddress = '0xa50a51c09a5c451C52BB714527E1974b686D8e77';
+const oracleCallerAddress = '0xe135783649BfA7c9c4c6F8E528C7f56166efC8a6';
 
 (async () => {
   // We first initialize ethers by creating a provider using our local node
