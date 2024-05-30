@@ -16,6 +16,14 @@ contract DataOracle is DataOracleInterface, Ownable {
     //event SetLatestDataEvent(string data, address callerAddress);
     event SetLatestDataEvent(uint256 tokens, address employeeAddress);
 
+    modifier onlyOwnerData() {
+        require(
+            owner() == _msgSender(),
+            "- - - DataOracle: caller is not the owner."
+        );
+        _;
+    }
+
     function getLatestData() external override returns (uint256) {
         randNonce++;
         uint id = uint(
@@ -26,37 +34,27 @@ contract DataOracle is DataOracleInterface, Ownable {
         return id;
     }
 
-    //TODO modificar la info que le llega para que sea del tipo 100 tokens a la dirección 0x1242342...
-    /*function setLatestData(
-        string memory _data,
-        address _callerAddress,
-        uint256 _id
-    ) public onlyOwner {
-        require(
-            pendingRequests[_id],
-            "This request is not in my pending list."
-        );
-        delete pendingRequests[_id];
-        OracleCallerInterface callerContractInstance;
-        callerContractInstance = OracleCallerInterface(_callerAddress);
-        callerContractInstance.callback(_id, _data);
-        emit SetLatestDataEvent(_data, _callerAddress);
-    }*/
-
     function setLatestData(
         uint256 _tokens,
         address _employeeAddress,
         address _callerAddress,
-        uint256 _id
-    ) public onlyOwner {
+        uint256 _id,
+        bool _lastOne
+    ) public onlyOwnerData {
         require(
             pendingRequests[_id],
             "This request is not in my pending list."
         );
-        delete pendingRequests[_id];
+        if (_lastOne) delete pendingRequests[_id];
         OracleCallerInterface callerContractInstance;
         callerContractInstance = OracleCallerInterface(_callerAddress);
-        callerContractInstance.callback(_id, _tokens, _employeeAddress);
+        callerContractInstance.callback(
+            msg.sender,
+            _id,
+            _tokens,
+            _employeeAddress,
+            _lastOne
+        );
         emit SetLatestDataEvent(_tokens, _employeeAddress);
     }
 }

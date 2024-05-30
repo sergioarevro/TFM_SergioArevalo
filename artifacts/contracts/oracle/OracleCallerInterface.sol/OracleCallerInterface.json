@@ -6,6 +6,11 @@
     {
       "inputs": [
         {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
           "internalType": "uint256",
           "name": "_id",
           "type": "uint256"
@@ -19,6 +24,11 @@
           "internalType": "address",
           "name": "_employeeAddress",
           "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "_lastOne",
+          "type": "bool"
         }
       ],
       "name": "callback",

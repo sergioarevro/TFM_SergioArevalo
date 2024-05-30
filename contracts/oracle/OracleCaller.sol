@@ -11,7 +11,6 @@ import "./OracleCallerInterface.sol";
 import "../HealthyToken.sol";
 
 contract OracleCaller is OracleCallerInterface, Ownable {
-    //string private data;
     uint256 tokens;
     address employeeAddress;
 
@@ -60,26 +59,19 @@ contract OracleCaller is OracleCallerInterface, Ownable {
         emit ReceivedNewRequestIdEvent(id);
     }
 
-    //TODO hacer la transferencia de tokens aquí. Modificar llegada de datos.
-    /**function callback(
-        uint256 _id,
-        string calldata _data
-    ) external override onlyOracle {
-        require(myRequests[_id], "This request is not in my pending list.");
-        data = _data;
-        delete myRequests[_id];
-        emit DataUpdatedEvent(_id, _data);
-    }**/
     function callback(
+        address _owner,
         uint256 _id,
         uint256 _tokens,
-        address _employeeAddress
+        address _employeeAddress,
+        bool _lastOne
     ) external override onlyOracle {
         require(myRequests[_id], "This request is not in my pending list.");
         tokens = _tokens;
         employeeAddress = _employeeAddress;
-        healthyToken.transferFrom(msg.sender, _employeeAddress, _tokens);
-        delete myRequests[_id];
+        healthyToken.transferFrom(_owner, _employeeAddress, _tokens);
+
+        if (_lastOne) delete myRequests[_id];
         emit DataUpdatedEvent(_id, _tokens, _employeeAddress);
     }
 

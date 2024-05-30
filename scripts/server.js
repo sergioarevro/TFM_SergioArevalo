@@ -2,13 +2,16 @@ const hre = require("hardhat");
 const { ethers } = require("ethers");
 const axios = require('axios');
 
-const jsonreader = require('./jsonreader')
+const { getInstance } = require ('./addresses.js');
+const addresses = getInstance();
+const dataOracleAddress = addresses.getDataOracleAddress();
+const oracleCallerAddress = addresses.getOracleCallerAddress();
+const healthyTokenAddress = addresses.getHealthyTokenAddress();
+const deployerAddress = addresses.getDeployerAddress();
 
 const DataOracleJSON = require(__dirname + '/../artifacts/contracts/oracle/DataOracle.sol/DataOracle.json');
-const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json'); 
-
-const dataOracleAddress = '0xfeae27388A65eE984F452f86efFEd42AaBD438FD';
-const oracleCallerAddress = '0xe135783649BfA7c9c4c6F8E528C7f56166efC8a6';
+const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/oracle/OracleCaller.sol/OracleCaller.json');
+const HealthyTokenJSON = require(__dirname + '/../artifacts/contracts/HealthyToken.sol/HealthyToken.json');
 
 const MAX_RETRIES = 1;
 const PROCESS_CHUNK = 3;
@@ -22,12 +25,27 @@ async function fetchData() {
   return data;
 }
 
-//Modificado
+  async function checkBalance(tokensToTransfer, healthyToken){
+    const balance = await healthyToken.balanceOf(deployerAddress);
+    console.log("checkBalance - Deployer balance: ", balance.toString());
+    if (balance < tokensToTransfer){
+      try{
+        const tx = await healthyToken.mint(10000, oracleCallerAddress);
+        await tx.wait();
+        const balance = await healthyToken.balanceOf(deployerAddress);
+        console.log("checkBalance - New mint done. Deployer balance: ", balance.toString());
+      } catch (error){
+        console.log("checkBalance - Error while mint tokens.");
+        console.log(error);
+      }
+    }
+  }
+
 //async function setLatestData(dataOracle, id, data) {
-  async function setLatestData(dataOracle, id, tokens, employeeAddress){
+  async function setLatestData(dataOracle, id, tokens, employeeAddress, lastOne){
   try {
     //const tx = await dataOracle.setLatestData(data, oracleCallerAddress, id);
-    const tx = await dataOracle.setLatestData(tokens, employeeAddress, oracleCallerAddress, id);
+    const tx = await dataOracle.setLatestData(tokens, employeeAddress, oracleCallerAddress, id, lastOne);
     await tx.wait();
   } catch (error) {
     console.log('Error encountered while calling setLatestData');
@@ -35,12 +53,9 @@ async function fetchData() {
   }
 }
 
-/**TODO la variable data tendrá todo el JSON, pasarselo a un nuevo js que trate todo el json y envíe de 1 en un 1 al setLatestData algo parecido
-a 100 tokens a la dirección 0x4532452346234. Hay que seguir modificando el setLatestData del dataOracle para que envíe los datos como queremos.
-Después modificar el callback del OracleCaller para que llame al ERC20 y haga la transfer
-**/
-async function processRequest(dataOracle, id) {
+async function processRequest(dataOracle, id, healthyToken) {
   let retries = 0
+
   while (retries < MAX_RETRIES) {
     try {
       const data = await fetchData()
@@ -49,25 +64,26 @@ async function processRequest(dataOracle, id) {
       const tokensPerMin = data['deporte-tokens'];
       const employees = data.empleados;
 
-      for (const employee of employees) {
+      for (let i = 0; i < employees.length; i++) {
+        const employee = employees[i];
         const name = employee.nombre;
         const sports = employee.deportes;
         const employeeAddress = employee.cuenta;
         let totalTokens = 0;
-    
+        
         for (const sport in sports) {
           const exerciseTime = sports[sport];
           const tokensPerSport = tokensPerMin[sport] || 0;
           const tokensEarned = exerciseTime * tokensPerSport;
           totalTokens += tokensEarned;
-          console.log(`${name} ha hecho ${exerciseTime} minutos de ${sport}, lo que equivale a ${tokensEarned} tokens.`);
         }
-    
+        
         console.log(`Total de tokens para ${name}: ${totalTokens}`);
-        await setLatestData(dataOracle, id, totalTokens, employeeAddress);
+        
+        const lastOne = i === employees.length - 1 ? true : false;
+        await checkBalance(totalTokens, healthyToken);
+        await setLatestData(dataOracle, id, totalTokens, employeeAddress, lastOne);
       }
-
-      //await setLatestData(dataOracle, id, tokens, employeeAddress);
       return;
     } catch (error) {
       if (retries === MAX_RETRIES - 1) {
@@ -80,13 +96,13 @@ async function processRequest(dataOracle, id) {
   }
 }
 
-async function processRequestQueue(dataOracle) {
+async function processRequestQueue(dataOracle, healthyToken) {
   console.log(">> processRequestQueue");
 
   let processedRequests = 0;
   while (pendingRequestQueue.length > 0 && processedRequests < PROCESS_CHUNK) {
     const reqId = pendingRequestQueue.shift();
-    await processRequest(dataOracle, reqId);
+    await processRequest(dataOracle, reqId, healthyToken);
     processedRequests++;
   }
 }
@@ -97,6 +113,9 @@ async function processRequestQueue(dataOracle) {
   const signer = wallet.connect(provider);
 
   console.log('Signer address:', await signer.getAddress());
+  console.log('Data Oracle Address: ', dataOracleAddress);
+  console.log('Oracle Caller Address: ', oracleCallerAddress);
+  console.log('Healthy Token Address: ', healthyTokenAddress);
 
   // Initialize contracts
   const dataOracle = new ethers.Contract(
@@ -111,6 +130,12 @@ async function processRequestQueue(dataOracle) {
     signer
   );
 
+  const healthyToken = new ethers.Contract(
+    healthyTokenAddress,
+    HealthyTokenJSON.abi,
+    signer
+  );
+
   oracleCaller.on("ReceivedNewRequestIdEvent", (_id) => {
     console.log("NEW EVENT - ReceivedNewRequestIdEvent:", _id);
     pendingRequestQueue.push(_id);
@@ -121,7 +146,7 @@ async function processRequestQueue(dataOracle) {
   })
 
   setInterval(async () => {
-    processRequestQueue(dataOracle);
+    processRequestQueue(dataOracle, healthyToken);
   }, 2000);
 
 })()
