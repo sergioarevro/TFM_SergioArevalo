@@ -12,7 +12,6 @@ contract HealthyToken is ERC20, Ownable {
         emit newMintDone(_initialSupply);
     }
 
-    //Aquí he quitado el OnlyOwner
     function transferFrom(
         address _sender,
         address _employeeAddress,

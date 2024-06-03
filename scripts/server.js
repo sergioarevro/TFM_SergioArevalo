@@ -27,15 +27,15 @@ async function fetchData() {
 
   async function checkBalance(tokensToTransfer, healthyToken){
     const balance = await healthyToken.balanceOf(deployerAddress);
-    console.log("checkBalance - Deployer balance: ", balance.toString());
+    console.log("SERVER - checkBalance - Deployer balance: ", balance.toString());
     if (balance < tokensToTransfer){
       try{
         const tx = await healthyToken.mint(10000, oracleCallerAddress);
         await tx.wait();
         const balance = await healthyToken.balanceOf(deployerAddress);
-        console.log("checkBalance - New mint done. Deployer balance: ", balance.toString());
+        console.log("SERVER - checkBalance - Nuevo minado. Deployer balance: ", balance.toString());
       } catch (error){
-        console.log("checkBalance - Error while mint tokens.");
+        console.log("SERVER - checkBalance - Error en el minado de tokens.");
         console.log(error);
       }
     }
@@ -48,7 +48,7 @@ async function fetchData() {
     const tx = await dataOracle.setLatestData(tokens, employeeAddress, oracleCallerAddress, id, lastOne);
     await tx.wait();
   } catch (error) {
-    console.log('Error encountered while calling setLatestData');
+    console.log('SERVER - Error llamando a setLatestData');
     console.log(error);
   }
 }
@@ -78,9 +78,13 @@ async function processRequest(dataOracle, id, healthyToken) {
           totalTokens += tokensEarned;
         }
         
-        console.log(`Total de tokens para ${name}: ${totalTokens}`);
+        console.log(`SERVER - Total de tokens para ${name}: ${totalTokens}`);
         
         const lastOne = i === employees.length - 1 ? true : false;
+
+        if (totalTokens == 0) {
+          console.log('SERVER - No se realiza transferencia a ${name}. No ha realizado actividad física.');
+        }
         await checkBalance(totalTokens, healthyToken);
         await setLatestData(dataOracle, id, totalTokens, employeeAddress, lastOne);
       }
@@ -97,7 +101,7 @@ async function processRequest(dataOracle, id, healthyToken) {
 }
 
 async function processRequestQueue(dataOracle, healthyToken) {
-  console.log(">> processRequestQueue");
+  console.log(">> SERVER - A la espera de solicitudes.");
 
   let processedRequests = 0;
   while (pendingRequestQueue.length > 0 && processedRequests < PROCESS_CHUNK) {
@@ -112,10 +116,10 @@ async function processRequestQueue(dataOracle, healthyToken) {
   const wallet = new ethers.Wallet("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63");
   const signer = wallet.connect(provider);
 
-  console.log('Signer address:', await signer.getAddress());
-  console.log('Data Oracle Address: ', dataOracleAddress);
-  console.log('Oracle Caller Address: ', oracleCallerAddress);
-  console.log('Healthy Token Address: ', healthyTokenAddress);
+  console.log('SERVER - Signer address:', await signer.getAddress());
+  console.log('SERVER - Data Oracle Address: ', dataOracleAddress);
+  console.log('SERVER - Oracle Caller Address: ', oracleCallerAddress);
+  console.log('SERVER - Healthy Token Address: ', healthyTokenAddress);
 
   // Initialize contracts
   const dataOracle = new ethers.Contract(
@@ -137,12 +141,12 @@ async function processRequestQueue(dataOracle, healthyToken) {
   );
 
   oracleCaller.on("ReceivedNewRequestIdEvent", (_id) => {
-    console.log("NEW EVENT - ReceivedNewRequestIdEvent:", _id);
+    console.log("SERVER - Recibida una solicitud de actualización de datos.");
     pendingRequestQueue.push(_id);
   })
 
   oracleCaller.on("DataUpdatedEvent", (_id, _data) => {
-    console.log("NEW EVENT - DataUpdatedEvent: id =", _id, 'data =', _data);
+    console.log("SERVER - Ultima solicitud realizada correctamente.");
   })
 
   setInterval(async () => {

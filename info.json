@@ -24,9 +24,9 @@
       "nombre": "Empleado2",
       "cuenta": "f17f52151EbEF6C7334FAD080c5704D77216b732",
       "deportes": {
-        "correr": 70,
-        "nadar": 20,
-        "baloncesto": 45
+        "correr": 0,
+        "nadar": 0,
+        "baloncesto": 0
       }
     },
     {

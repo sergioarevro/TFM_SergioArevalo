@@ -185,8 +185,8 @@
       ]
     },
     "/Users/sergio/Desktop/TFM/project/contracts/HealthyToken.sol": {
-      "lastModificationDate": 1717065932483,
-      "contentHash": "f42e7db2a7d22552802d7c373360bc1c",
+      "lastModificationDate": 1717082843730,
+      "contentHash": "5c9eb2b9a19e4a17b930e3a499e497c1",
       "sourceName": "contracts/HealthyToken.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -223,8 +223,8 @@
       ]
     },
     "/Users/sergio/Desktop/TFM/project/contracts/oracle/OracleCaller.sol": {
-      "lastModificationDate": 1717061433498,
-      "contentHash": "62e52cc0e2b03d0ed92c0934d2c9a0f0",
+      "lastModificationDate": 1717069283755,
+      "contentHash": "ad2a71d41eb25997dd4baa30b14a1f67",
       "sourceName": "contracts/oracle/OracleCaller.sol",
       "solcConfig": {
         "version": "0.8.4",
