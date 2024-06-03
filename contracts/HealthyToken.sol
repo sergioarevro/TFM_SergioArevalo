@@ -27,6 +27,7 @@ contract HealthyToken is ERC20, Ownable {
     function mint(uint256 _tokens, address _toApprove) public onlyOwner {
         _mint(owner(), _tokens * (10 ** decimals()));
         super.approve(_toApprove, _tokens);
+        emit newMintDone(_tokens);
     }
 
     function decimals() public pure override returns (uint8) {

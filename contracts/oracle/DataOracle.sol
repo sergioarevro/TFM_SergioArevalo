@@ -13,13 +13,12 @@ contract DataOracle is DataOracleInterface, Ownable {
     mapping(uint256 => bool) pendingRequests;
 
     event GetLatestDataEvent(address callerAddress, uint id);
-    //event SetLatestDataEvent(string data, address callerAddress);
     event SetLatestDataEvent(uint256 tokens, address employeeAddress);
 
     modifier onlyOwnerData() {
         require(
             owner() == _msgSender(),
-            "- - - DataOracle: caller is not the owner."
+            "DataOracle: caller is not the owner."
         );
         _;
     }

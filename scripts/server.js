@@ -19,6 +19,7 @@ const PROCESS_CHUNK = 3;
 let pendingRequestQueue = []
 
 async function fetchData() {
+  console.log('SERVER: Buscando información sobre la actividad fisica de los empleados en info.json.');
   const url = 'https://raw.githubusercontent.com/sergioarevro/project/main/info.json';
   const response = await axios.get(url);
   const data = response.data;
@@ -27,28 +28,28 @@ async function fetchData() {
 
   async function checkBalance(tokensToTransfer, healthyToken){
     const balance = await healthyToken.balanceOf(deployerAddress);
-    console.log("SERVER - checkBalance - Deployer balance: ", balance.toString());
+    console.log('SERVER: Consultando el balance del Deployer. Balance: ', balance.toString());
     if (balance < tokensToTransfer){
+      console.log('SERVER: Se necesita un nuevo minado de tokens.');
       try{
         const tx = await healthyToken.mint(10000, oracleCallerAddress);
         await tx.wait();
         const balance = await healthyToken.balanceOf(deployerAddress);
-        console.log("SERVER - checkBalance - Nuevo minado. Deployer balance: ", balance.toString());
+        console.log("SERVER: Nuevo minado realizado. Deployer balance: ", balance.toString());
       } catch (error){
-        console.log("SERVER - checkBalance - Error en el minado de tokens.");
+        console.log("SERVER: Error en el minado de tokens.");
         console.log(error);
       }
     }
   }
 
-//async function setLatestData(dataOracle, id, data) {
   async function setLatestData(dataOracle, id, tokens, employeeAddress, lastOne){
   try {
-    //const tx = await dataOracle.setLatestData(data, oracleCallerAddress, id);
+    console.log('SERVER: Enviando la información sobre las transferencias a DataOracle.sol');
     const tx = await dataOracle.setLatestData(tokens, employeeAddress, oracleCallerAddress, id, lastOne);
     await tx.wait();
   } catch (error) {
-    console.log('SERVER - Error llamando a setLatestData');
+    console.log('SERVER: Error llamando a setLatestData');
     console.log(error);
   }
 }
@@ -59,8 +60,7 @@ async function processRequest(dataOracle, id, healthyToken) {
   while (retries < MAX_RETRIES) {
     try {
       const data = await fetchData()
-      
-      //Gestión de la logica para transferencias
+
       const tokensPerMin = data['deporte-tokens'];
       const employees = data.empleados;
 
@@ -70,6 +70,8 @@ async function processRequest(dataOracle, id, healthyToken) {
         const sports = employee.deportes;
         const employeeAddress = employee.cuenta;
         let totalTokens = 0;
+
+        console.log(`\n->SERVER: Iniciando el cálculo de tokens para ${name}`);
         
         for (const sport in sports) {
           const exerciseTime = sports[sport];
@@ -78,15 +80,16 @@ async function processRequest(dataOracle, id, healthyToken) {
           totalTokens += tokensEarned;
         }
         
-        console.log(`SERVER - Total de tokens para ${name}: ${totalTokens}`);
+        console.log(`SERVER: Total de tokens para ${name}: ${totalTokens} tokens.`);
         
         const lastOne = i === employees.length - 1 ? true : false;
 
         if (totalTokens == 0) {
-          console.log('SERVER - No se realiza transferencia a ${name}. No ha realizado actividad física.');
+          console.log(`SERVER: No se realiza transferencia a ${name}. No ha realizado actividad física.`);
+        } else{
+          await checkBalance(totalTokens, healthyToken);
+          await setLatestData(dataOracle, id, totalTokens, employeeAddress, lastOne);
         }
-        await checkBalance(totalTokens, healthyToken);
-        await setLatestData(dataOracle, id, totalTokens, employeeAddress, lastOne);
       }
       return;
     } catch (error) {
@@ -101,7 +104,7 @@ async function processRequest(dataOracle, id, healthyToken) {
 }
 
 async function processRequestQueue(dataOracle, healthyToken) {
-  console.log(">> SERVER - A la espera de solicitudes.");
+  //console.log(">> SERVER - A la espera de solicitudes.");
 
   let processedRequests = 0;
   while (pendingRequestQueue.length > 0 && processedRequests < PROCESS_CHUNK) {
@@ -116,10 +119,13 @@ async function processRequestQueue(dataOracle, healthyToken) {
   const wallet = new ethers.Wallet("0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63");
   const signer = wallet.connect(provider);
 
-  console.log('SERVER - Signer address:', await signer.getAddress());
-  console.log('SERVER - Data Oracle Address: ', dataOracleAddress);
-  console.log('SERVER - Oracle Caller Address: ', oracleCallerAddress);
-  console.log('SERVER - Healthy Token Address: ', healthyTokenAddress);
+  console.log('=========================== Iniciando server ===============================');
+  console.log('Signer address:', await signer.getAddress());
+  console.log('Data Oracle Address: ', dataOracleAddress);
+  console.log('Oracle Caller Address: ', oracleCallerAddress);
+  console.log('Healthy Token Address: ', healthyTokenAddress);
+  console.log('============================================================================\n');
+  console.log('SERVER: A la espera de solicitudes.\n');
 
   // Initialize contracts
   const dataOracle = new ethers.Contract(
@@ -141,12 +147,24 @@ async function processRequestQueue(dataOracle, healthyToken) {
   );
 
   oracleCaller.on("ReceivedNewRequestIdEvent", (_id) => {
-    console.log("SERVER - Recibida una solicitud de actualización de datos.");
+    console.log("-> AVISO: Mensaje recibido desde OracleCaller.sol\n-> Recibida una solicitud de actualización de datos.\n");
     pendingRequestQueue.push(_id);
   })
 
-  oracleCaller.on("DataUpdatedEvent", (_id, _data) => {
-    console.log("SERVER - Ultima solicitud realizada correctamente.");
+  oracleCaller.on("DataUpdatedEvent", (_id, _tokens, _employeeAddress) => {
+    console.log('-> AVISO: Mensaje emitido desde OracleCaller.sol\n-> La información ha llegado correctamente a la Blockchain.\n-> Realizando comunicación con HealthyToken.sol.\n');
+  })
+
+  healthyToken.on("newTransferDone" ,(_amount, _employeeAddress) => {
+    console.log(`-> AVISO: Mensaje emitido desde HealthyToken.sol\n-> La transferencia de ${_amount} tokens a la cuenta ${_employeeAddress} se ha realizado correctamente.\n`)
+  })
+
+  healthyToken.on("newMintDone", (_tokens) => {
+    console.log(`-> AVISO: Mensaje emitido desde HealthyToken.sol\n-> El minado de ${_tokens} nuevos tokens se ha realizado correctamente.\n`)
+  })
+
+  dataOracle.on("SetLatestDataEvent", (_tokens, _employeeAddress) => {
+    console.log(`-> AVISO: Mensaje emitido desde DataOracle.sol\n-> Se ha transferido la información a OracleCaller.sol.\n`)
   })
 
   setInterval(async () => {

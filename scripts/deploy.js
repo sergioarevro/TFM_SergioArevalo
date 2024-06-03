@@ -15,15 +15,15 @@ async function main() {
   // Deployer info
   const deployer = signer;
   addresses.setDeployerAddress(deployer.address);
-  console.log("Deploying contracts with the account:", addresses.getDeployerAddress());
+  console.log("Desplegando los contratos con la cuenta:", addresses.getDeployerAddress());
 
   // Deploy HealthyToken.sol
-  const initialSupply = 10;
+  const initialSupply = 1000;
   const HealthyToken = await hre.ethers.getContractFactory("HealthyToken");
   const healthyToken = await HealthyToken.deploy(initialSupply);
   await healthyToken.deployed();
   addresses.setHealthyTokenAddress(healthyToken.address);
-  console.log("HealthyToken deployed to: ", addresses.getHealthyTokenAddress());
+  console.log("HealthyToken desplegado en la dirección: ", addresses.getHealthyTokenAddress());
 
   // Getting initial balance of deployer
   const healthyTokenCaller = new ethers.Contract(
@@ -33,21 +33,21 @@ async function main() {
   );
   
   const balance = await healthyTokenCaller.balanceOf(signer.address);
-  console.log("The initial supply of deployer account is: ",balance.toString());
+  console.log("El balance inicial de la cuenta del deployer es: ",balance.toString());
 
   // Deploy DataOracle
   const DataOracle = await hre.ethers.getContractFactory("DataOracle");
   const dataOracle = await DataOracle.deploy();
   await dataOracle.deployed();
   addresses.setDataOracleAddress(dataOracle.address);
-  console.log("DataOracle deployed to:", addresses.getDataOracleAddress());
+  console.log("DataOracle desplegado en la dirección:", addresses.getDataOracleAddress());
 
   // Deploy OracleCaller
   const OracleCaller = await hre.ethers.getContractFactory("OracleCaller");
   const oracleCaller = await OracleCaller.deploy();
   await oracleCaller.deployed();
   addresses.setOracleCallerAddress(oracleCaller.address);
-  console.log("OracleCaller deployed to:", addresses.getOracleCallerAddress());
+  console.log("OracleCaller desplegado en la dirección:", addresses.getOracleCallerAddress());
 
   //Approve OracleCaller to spent tokens for tranfer
   const setAllowanceTx = await healthyTokenCaller.approve(addresses.getOracleCallerAddress(), balance);
@@ -60,14 +60,14 @@ async function main() {
   await setInstanceTx.wait();
   const oracleInstanceAddress = await oracleCaller.getOracleInstanceAddress();
   addresses.setOracleInstanceAddress(oracleInstanceAddress);
-  console.log('OracleCaller oracle instance addr:', addresses.getOracleInstanceAddress());
+  console.log('Instancia OracleCaller en la dirección:', addresses.getOracleInstanceAddress());
 
   //Set HealthyToken instance on OracleCaller
   const setTokenTx = await oracleCaller.setHealthyTokenInstanceAddress(healthyToken.address);
   await setTokenTx.wait();
   const tokenInstanceAddress = await oracleCaller.getHealthyTokenInstanceAddress();
   addresses.setHealthyTokenAddress(tokenInstanceAddress);
-  console.log('Token oracle instance addr:', addresses.getHealthyTokenAddress());
+  console.log('Instancia de HealthyToken en la dirección:', addresses.getHealthyTokenAddress());
 }
 
 main()

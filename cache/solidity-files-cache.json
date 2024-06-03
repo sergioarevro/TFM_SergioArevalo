@@ -185,8 +185,8 @@
       ]
     },
     "/Users/sergio/Desktop/TFM/project/contracts/HealthyToken.sol": {
-      "lastModificationDate": 1717082843730,
-      "contentHash": "5c9eb2b9a19e4a17b930e3a499e497c1",
+      "lastModificationDate": 1717429370048,
+      "contentHash": "3ba4421206335a207cd3922e7f2d4efd",
       "sourceName": "contracts/HealthyToken.sol",
       "solcConfig": {
         "version": "0.8.4",

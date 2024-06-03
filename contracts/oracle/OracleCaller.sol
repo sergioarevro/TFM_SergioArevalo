@@ -2,10 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-
-//Añadido por mi
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
 import "./DataOracleInterface.sol";
 import "./OracleCallerInterface.sol";
 import "../HealthyToken.sol";
@@ -22,12 +19,8 @@ contract OracleCaller is OracleCallerInterface, Ownable {
 
     mapping(uint256 => bool) myRequests;
 
-    event newOracleAddressEvent(address oracleAddress);
     event ReceivedNewRequestIdEvent(uint256 id);
     event DataUpdatedEvent(uint256 id, uint256 tokens, address employeeAddress);
-
-    //TODO modificar que devuelva la ultima transacción
-    function getData() public view returns (string memory) {}
 
     function getOracleInstanceAddress() public view returns (address) {
         return oracleAddress;
@@ -38,10 +31,8 @@ contract OracleCaller is OracleCallerInterface, Ownable {
     ) public onlyOwner {
         oracleAddress = _oracleInstanceAddress;
         oracleInstance = DataOracleInterface(oracleAddress);
-        emit newOracleAddressEvent(oracleAddress);
     }
 
-    //Añadida por mi
     function setHealthyTokenInstanceAddress(
         address _healthyToken
     ) public onlyOwner {
