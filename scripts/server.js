@@ -34,6 +34,8 @@ async function fetchData() {
       try{
         const tx = await healthyToken.mint(10000, oracleCallerAddress);
         await tx.wait();
+        const mintTransactionHash = tx.hash;
+        console.log("Hash de la transacción de minado:", mintTransactionHash);
         const balance = await healthyToken.balanceOf(deployerAddress);
         console.log("SERVER: Nuevo minado realizado. Deployer balance: ", balance.toString());
       } catch (error){

@@ -24,6 +24,8 @@ async function main() {
   await healthyToken.deployed();
   addresses.setHealthyTokenAddress(healthyToken.address);
   console.log("HealthyToken desplegado en la dirección: ", addresses.getHealthyTokenAddress());
+  const deployTransactionHashToken = healthyToken.deployTransaction.hash;
+  console.log("Hash de la transacción de despliegue de HealthyToken:", deployTransactionHashToken);
 
   // Getting initial balance of deployer
   const healthyTokenCaller = new ethers.Contract(
@@ -41,6 +43,8 @@ async function main() {
   await dataOracle.deployed();
   addresses.setDataOracleAddress(dataOracle.address);
   console.log("DataOracle desplegado en la dirección:", addresses.getDataOracleAddress());
+  const deployTransactionHashData = dataOracle.deployTransaction.hash;
+  console.log("Hash de la transacción de despliegue de DataOracle:", deployTransactionHashData);
 
   // Deploy OracleCaller
   const OracleCaller = await hre.ethers.getContractFactory("OracleCaller");
@@ -48,6 +52,8 @@ async function main() {
   await oracleCaller.deployed();
   addresses.setOracleCallerAddress(oracleCaller.address);
   console.log("OracleCaller desplegado en la dirección:", addresses.getOracleCallerAddress());
+  const deployTransactionHashOracle = oracleCaller.deployTransaction.hash;
+  console.log("Hash de la transacción de despliegue de OracleCaller:", deployTransactionHashOracle);
 
   //Approve OracleCaller to spent tokens for tranfer
   const setAllowanceTx = await healthyTokenCaller.approve(addresses.getOracleCallerAddress(), balance);
